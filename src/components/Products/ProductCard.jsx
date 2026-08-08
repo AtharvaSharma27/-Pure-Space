@@ -103,7 +103,7 @@ const ProductImage = ({ product }) => {
   if (product.image && !imgError) {
     return (
       <img
-        src={product.image}
+        src={product.image.startsWith("/") ? `${import.meta.env.BASE_URL}${product.image.slice(1)}` : product.image}
         alt={product.name}
         className="w-full h-full object-contain p-3 group-hover:scale-105 transition-transform duration-500"
         onError={() => setImgError(true)}

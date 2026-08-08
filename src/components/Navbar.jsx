@@ -52,7 +52,7 @@ const Navbar = () => {
           {/* Logo */}
           <a href="#home" className="flex items-center" onClick={() => setActiveLink('#home')}>
             <img 
-              src="/images/logo.png" 
+              src={`${import.meta.env.BASE_URL}images/logo.png`} 
               alt="Pure Space Cleaners" 
               className="h-16 sm:h-20 w-auto object-contain" 
             />

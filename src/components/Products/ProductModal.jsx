@@ -153,7 +153,7 @@ const ModalImage = ({ product }) => {
     return (
       <div className="w-full aspect-[4/3] sm:aspect-[16/9] overflow-hidden bg-gray-50 flex items-center justify-center">
         <img
-          src={product.image}
+          src={product.image.startsWith("/") ? `${import.meta.env.BASE_URL}${product.image.slice(1)}` : product.image}
           alt={product.name}
           className="w-full h-full object-contain p-4"
           onError={() => setImgError(true)}

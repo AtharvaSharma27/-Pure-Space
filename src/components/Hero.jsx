@@ -147,7 +147,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-full aspect-[4/3] max-w-lg mx-auto rounded-3xl flex items-center justify-center shadow-2xl border border-white/40 overflow-hidden bg-white/60 backdrop-blur-sm">
                 <img 
-                  src="/images/hero-products-new.png" 
+                  src={`${import.meta.env.BASE_URL}images/hero-products-new.png`} 
                   alt="Pure Space Cleaners" 
                   className="w-full h-full object-contain hover:scale-105 transition-transform duration-700"
                 />
