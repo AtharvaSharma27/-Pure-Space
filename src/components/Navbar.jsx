@@ -50,13 +50,12 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-18">
           {/* Logo */}
-          <a href="#home" className="flex flex-col leading-tight" onClick={() => setActiveLink('#home')}>
-            <span className="text-xl sm:text-2xl font-bold text-brand-blue tracking-tight">
-              Pure Space
-            </span>
-            <span className="text-[10px] sm:text-xs text-brand-teal font-medium -mt-1">
-              Clean Spaces. Pure Living.
-            </span>
+          <a href="#home" className="flex items-center" onClick={() => setActiveLink('#home')}>
+            <img 
+              src="/images/logo.png" 
+              alt="Pure Space Cleaners" 
+              className="h-16 sm:h-20 w-auto object-contain" 
+            />
           </a>
 
           {/* Desktop Nav */}
@@ -96,41 +95,35 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Drawer */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="md:hidden overflow-hidden bg-white border-t border-gray-100"
+      <div
+        className={`md:hidden overflow-hidden bg-white border-t border-gray-100 transition-all duration-300 ease-in-out ${
+          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <div className="px-4 py-4 space-y-1">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => handleNavClick(link.href)}
+              className={`block px-4 py-3 rounded-xl text-base font-medium transition-colors ${
+                activeLink === link.href
+                  ? 'text-white bg-brand-teal'
+                  : 'text-brand-dark hover:bg-brand-bg-light'
+              }`}
+            >
+              {link.label}
+            </a>
+          ))}
+          <a
+            href="#contact"
+            onClick={() => handleNavClick('#contact')}
+            className="block mt-3 px-4 py-3 bg-brand-blue text-white text-center rounded-xl font-semibold text-base"
           >
-            <div className="px-4 py-4 space-y-1">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => handleNavClick(link.href)}
-                  className={`block px-4 py-3 rounded-xl text-base font-medium transition-colors ${
-                    activeLink === link.href
-                      ? 'text-white bg-brand-teal'
-                      : 'text-brand-dark hover:bg-brand-bg-light'
-                  }`}
-                >
-                  {link.label}
-                </a>
-              ))}
-              <a
-                href="#contact"
-                onClick={() => handleNavClick('#contact')}
-                className="block mt-3 px-4 py-3 bg-brand-blue text-white text-center rounded-xl font-semibold text-base"
-              >
-                Get a Quote
-              </a>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            Get a Quote
+          </a>
+        </div>
+      </div>
     </nav>
   );
 };

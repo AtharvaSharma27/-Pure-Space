@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
-import { MessageCircle } from 'lucide-react';
+
 
 const WhatsAppFAB = () => {
   const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '91XXXXXXXXXX';
   const defaultMessage = encodeURIComponent(
-    "Hi! I visited the Pure Space website and I'm interested in your cleaning products. Could you please share more details?"
+    "Hi! I visited the Pure Space Cleaners website and I'm interested in your cleaning products. Could you please share more details?"
   );
 
   return (

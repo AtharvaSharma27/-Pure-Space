@@ -26,16 +26,16 @@ const About = () => {
             className="lg:col-span-3"
           >
             <h2 className="text-[26px] sm:text-4xl font-semibold text-brand-blue mb-6">
-              About Pure Space
+              About Pure Space Cleaners
             </h2>
             <p className="text-sm sm:text-base text-brand-gray leading-relaxed">
-              Pure Space is an Indian cleaning solutions brand committed to delivering
+              Pure Space Cleaners is an Indian cleaning solutions brand committed to delivering
               hospital-grade hygiene with everyday affordability. Manufactured using authentic
               Pine Oil base and natural fragrances, our products are trusted by households,
               hospitals, hotels, offices, and industrial facilities across India.
             </p>
             <p className="text-sm sm:text-base text-brand-gray leading-relaxed mt-4">
-              From powerful disinfectants to rich-fragranced floor cleaners — every Pure Space
+              From powerful disinfectants to rich-fragranced floor cleaners — every Pure Space Cleaners
               product is crafted to leave your spaces genuinely clean, fresh, and safe.
             </p>
           </motion.div>

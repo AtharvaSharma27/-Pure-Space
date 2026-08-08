@@ -9,7 +9,6 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold text-white mb-2">Pure Space</h3>
             <p className="text-sm text-brand-teal font-medium mb-4">
               Clean Spaces. Pure Living.
             </p>
@@ -19,7 +18,9 @@ const Footer = () => {
             {/* Social Icons */}
             <div className="flex gap-3">
               <a
-                href="#"
+                href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER || '91XXXXXXXXXX'}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-brand-teal flex items-center justify-center transition-colors"
                 aria-label="WhatsApp"
               >
@@ -95,7 +96,7 @@ const Footer = () => {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <p className="text-center text-xs sm:text-sm text-gray-500">
-            © {currentYear} Pure Space. All rights reserved. Made in India 🇮🇳
+            © {currentYear} Pure Space Cleaners. All rights reserved. Made in India 🇮🇳
           </p>
         </div>
       </div>

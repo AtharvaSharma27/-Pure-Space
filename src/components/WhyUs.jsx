@@ -23,7 +23,7 @@ const WhyUs = () => {
           className="text-center mb-12"
         >
           <h2 className="text-[26px] sm:text-4xl font-semibold text-brand-blue mb-3">
-            Why Choose Pure Space?
+            Why Choose Pure Space Cleaners?
           </h2>
           <p className="text-sm sm:text-base text-brand-gray max-w-2xl mx-auto">
             Every product is designed with care, quality, and performance in mind.

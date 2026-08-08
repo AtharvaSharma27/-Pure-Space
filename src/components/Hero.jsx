@@ -78,10 +78,25 @@ const Hero = () => {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-sm sm:text-base lg:text-lg text-brand-gray leading-relaxed mb-8 max-w-xl">
+            <p className="text-sm sm:text-base lg:text-lg text-brand-gray leading-relaxed mb-4 max-w-xl">
               India's premium range of disinfectants, floor cleaners, glass cleaners &
               hygiene solutions — for homes, offices & industries.
             </p>
+            
+            {/* Promotional Highlight */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.4 }}
+              className="bg-yellow-50/90 border border-yellow-200 rounded-xl p-4 mb-8 shadow-sm inline-block"
+            >
+              <p className="font-bold text-red-600 text-lg sm:text-xl mb-1">
+                🔥 1Ltr starting from ₹49/- and 5Ltr starting from ₹199/- only!
+              </p>
+              <p className="text-sm sm:text-base text-brand-teal font-semibold">
+                Best quality at lowest prices & Cheapest price in bulk all over India.
+              </p>
+            </motion.div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10">
@@ -109,7 +124,7 @@ const Hero = () => {
               className="flex flex-wrap gap-x-4 gap-y-2 sm:gap-x-6"
             >
               {[
-                { value: '17', label: 'Products' },
+                { value: '15', label: 'Products' },
                 { value: '4', label: 'Categories' },
                 { value: '99.9%', label: 'Germ-Kill' },
                 { value: 'Bulk', label: 'Supply' },
@@ -133,7 +148,7 @@ const Hero = () => {
               <div className="w-full aspect-[4/3] max-w-lg mx-auto rounded-3xl flex items-center justify-center shadow-2xl border border-white/40 overflow-hidden bg-white/60 backdrop-blur-sm">
                 <img 
                   src="/images/hero-products-new.png" 
-                  alt="Pure Space Cleaning Products" 
+                  alt="Pure Space Cleaners" 
                   className="w-full h-full object-contain hover:scale-105 transition-transform duration-700"
                 />
               </div>
