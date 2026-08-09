@@ -124,7 +124,7 @@ const Hero = () => {
               className="flex flex-wrap gap-x-4 gap-y-2 sm:gap-x-6"
             >
               {[
-                { value: '15', label: 'Products' },
+                { value: '24', label: 'Products' },
                 { value: '4', label: 'Categories' },
                 { value: '99.9%', label: 'Germ-Kill' },
                 { value: 'Bulk', label: 'Supply' },

@@ -37,7 +37,7 @@ const Contact = () => {
           {/* WhatsApp Card */}
           <motion.a
             href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
-            target="_blank"
+          target="_blank" rel="noopener noreferrer"
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

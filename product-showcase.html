@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Variant Selector</title>
+<style>
+  /* --- CSS Variables & Reset --- */
+  :root {
+    --primary-color: #007bff;
+    --primary-hover: #0056b3;
+    --text-dark: #222;
+    --text-light: #666;
+    --bg-light: #f8f9fa;
+    --border-color: #ddd;
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+    --price-color: #B12704; /* Amazon-style red for price */
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.5;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* --- Main Container --- */
+  .product-page-container {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  /* --- Featured Product Card --- */
+  .featured-product-card {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: box-shadow var(--transition-speed) ease;
+  }
+  
+  .featured-product-card:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  }
+
+  .main-image-container {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+
+  .main-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: opacity 0.2s ease;
+  }
+  
+  .fade-out {
+    opacity: 0;
+  }
+
+  .product-info {
+    text-align: left;
+  }
+
+  .product-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--price-color);
+  }
+
+  /* --- Expanding Variant Selector Section --- */
+  .variant-section {
+    display: none; /* Hidden by default until clicked */
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+    animation: fadeIn 0.3s ease;
+  }
+
+  /* Added class to show the section */
+  .variant-section.expanded {
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .variant-label {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+  }
+  
+  .variant-label strong {
+    color: var(--text-dark);
+    font-weight: 600;
+  }
+
+  .variant-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* Amazon-style thumbnail cards */
+  .variant-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 4px;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .variant-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 2px;
+    margin-bottom: 4px;
+  }
+
+  .variant-card .v-name {
+    font-size: 0.75rem;
+    text-align: center;
+    color: var(--text-dark);
+    line-height: 1.2;
+    margin-bottom: 2px;
+  }
+
+  .variant-card .v-price {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: var(--price-color);
+  }
+
+  /* Hover & Active States */
+  .variant-card:hover {
+    border-color: #999;
+  }
+
+  .variant-card.active {
+    border-color: #e77600; /* Amazon active orange border */
+    box-shadow: 0 0 0 1px #e77600;
+    background-color: #fef8f2;
+  }
+  
+  /* Instruction Text */
+  .click-hint {
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 480px) {
+    .variant-card {
+      width: calc(33.333% - 7px); /* 3 cards per row on mobile */
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="product-page-container">
+  
+  <!-- Single Featured Product Card -->
+  <div class="featured-product-card" id="mainProductCard">
+    
+    <div class="main-image-container">
+      <img id="mainProductImg" src="https://images.unsplash.com/photo-1444312645910-ffa973656eba?auto=format&fit=crop&w=400&q=80" alt="Pine Phenyl">
+    </div>
+    
+    <div class="product-info">
+      <h2 class="product-title" id="mainProductTitle">Premium Pine Phenyl</h2>
+      <div class="product-price" id="mainProductPrice">₹160.00</div>
+      <div class="click-hint" id="clickHint">Tap to see available fragrances ▾</div>
+    </div>
+
+    <!-- Variant Selector Section (Expands below details) -->
+    <div class="variant-section" id="variantSection">
+      
+      <div class="variant-label">
+        Fragrance: <strong id="selectedFragranceText">Pine</strong>
+      </div>
+      
+      <div class="variant-grid">
+        
+        <!-- Variant: Pine (Pre-selected default) -->
+        <div class="variant-card active" 
+             data-fragrance="Pine" 
+             data-fullname="Premium Pine Phenyl" 
+             data-price="₹160.00"
+             data-img="https://images.unsplash.com/photo-1444312645910-ffa973656eba?auto=format&fit=crop&w=400&q=80">
+          <img src="https://images.unsplash.com/photo-1444312645910-ffa973656eba?auto=format&fit=crop&w=150&q=80" alt="Pine">
+          <span class="v-name">Pine</span>
+          <span class="v-price">₹160</span>
+        </div>
+
+        <!-- Variant: Lavender -->
+        <div class="variant-card" 
+             data-fragrance="Lavender" 
+             data-fullname="Premium Lavender Phenyl" 
+             data-price="₹200.00"
+             data-img="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=400&q=80">
+          <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=150&q=80" alt="Lavender">
+          <span class="v-name">Lavender</span>
+          <span class="v-price">₹200</span>
+        </div>
+
+        <!-- Variant: Lemongrass -->
+        <div class="variant-card" 
+             data-fragrance="Lemongrass" 
+             data-fullname="Premium Lemongrass Phenyl" 
+             data-price="₹160.00"
+             data-img="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=400&q=80">
+          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=150&q=80" alt="Lemongrass">
+          <span class="v-name">Lemongrass</span>
+          <span class="v-price">₹160</span>
+        </div>
+
+        <!-- Variant: Kapoor -->
+        <div class="variant-card" 
+             data-fragrance="Premium Kapoor" 
+             data-fullname="Premium Kapoor Phenyl" 
+             data-price="₹180.00"
+             data-img="https://images.unsplash.com/photo-1608670172605-236b75f8507d?auto=format&fit=crop&w=400&q=80">
+          <img src="https://images.unsplash.com/photo-1608670172605-236b75f8507d?auto=format&fit=crop&w=150&q=80" alt="Kapoor">
+          <span class="v-name">Kapoor</span>
+          <span class="v-price">₹180</span>
+        </div>
+
+      </div>
+    </div> <!-- /variant-section -->
+    
+  </div> <!-- /featured-product-card -->
+  
+</div>
+
+<script>
+  // DOM Elements
+  const mainProductCard = document.getElementById('mainProductCard');
+  const variantSection = document.getElementById('variantSection');
+  const clickHint = document.getElementById('clickHint');
+  
+  const mainProductImg = document.getElementById('mainProductImg');
+  const mainProductTitle = document.getElementById('mainProductTitle');
+  const mainProductPrice = document.getElementById('mainProductPrice');
+  const selectedFragranceText = document.getElementById('selectedFragranceText');
+  
+  const variantCards = document.querySelectorAll('.variant-card');
+  
+  // 1. Expand the variant section when clicking the main product card
+  mainProductCard.addEventListener('click', function(e) {
+    // Check if the click happened on a variant card (we handle that separately)
+    if (e.target.closest('.variant-card')) return;
+    
+    // Toggle the expansion
+    const isExpanded = variantSection.classList.contains('expanded');
+    
+    if (!isExpanded) {
+      variantSection.classList.add('expanded');
+      clickHint.style.display = 'none'; // Hide the hint once opened
+    }
+  });
+
+  // 2. Handle Variant Selection
+  variantCards.forEach(card => {
+    card.addEventListener('click', function(e) {
+      e.stopPropagation(); // Prevent the main card click event from firing
+      
+      // Remove 'active' from all cards
+      variantCards.forEach(c => c.classList.remove('active'));
+      
+      // Add 'active' to the clicked card
+      this.classList.add('active');
+      
+      // Extract Data from the clicked card
+      const newFragrance = this.getAttribute('data-fragrance');
+      const newTitle = this.getAttribute('data-fullname');
+      const newPrice = this.getAttribute('data-price');
+      const newImg = this.getAttribute('data-img');
+      
+      // Update UI immediately for text
+      selectedFragranceText.textContent = newFragrance;
+      mainProductTitle.textContent = newTitle;
+      mainProductPrice.textContent = newPrice;
+      
+      // Smooth fade transition for the image
+      mainProductImg.classList.add('fade-out');
+      
+      setTimeout(() => {
+        mainProductImg.src = newImg;
+        mainProductImg.classList.remove('fade-out');
+      }, 200);
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useDragControls } from 'framer-motion';
 import { X, Camera, Package, Droplets, Palette, FlaskConical, MapPin, Boxes, Tag, Mail } from 'lucide-react';
 import { fragranceConfig } from '../../data/fragranceMap';
 
 const ProductModal = ({ product, onClose, onGetQuote }) => {
+  const dragControls = useDragControls();
   const frag = fragranceConfig[product.fragrance] || fragranceConfig.none;
 
   useEffect(() => {
@@ -53,7 +54,17 @@ const ProductModal = ({ product, onClose, onGetQuote }) => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: '100%', opacity: 0 }}
           transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-          className="relative w-full sm:max-w-2xl max-h-[90vh] overflow-y-auto bg-white rounded-t-3xl sm:rounded-3xl shadow-2xl z-10"
+          drag="y"
+          dragControls={dragControls}
+          dragListener={false}
+          dragConstraints={{ top: 0, bottom: 0 }}
+          dragElastic={0.7}
+          onDragEnd={(e, { offset, velocity }) => {
+            if (offset.y > 100 || velocity.y > 500) {
+              onClose();
+            }
+          }}
+          className="relative w-full sm:max-w-2xl max-h-[90vh] overflow-y-auto bg-white rounded-t-3xl sm:rounded-3xl shadow-2xl z-10 touch-pan-y"
         >
           {/* Close Button */}
           <button
@@ -64,13 +75,20 @@ const ProductModal = ({ product, onClose, onGetQuote }) => {
             <X size={20} className="text-brand-dark" />
           </button>
 
-          {/* Drag indicator (mobile) */}
-          <div className="sm:hidden flex justify-center pt-3 pb-1">
-            <div className="w-10 h-1 rounded-full bg-gray-300" />
-          </div>
+          {/* Draggable Header Area (Image + Handle) */}
+          <div 
+            className="w-full cursor-grab active:cursor-grabbing"
+            onPointerDown={(e) => dragControls.start(e)}
+            style={{ touchAction: 'none' }}
+          >
+            {/* Drag indicator (mobile) */}
+            <div className="sm:hidden flex justify-center pt-3 pb-1">
+              <div className="w-10 h-1 rounded-full bg-gray-300" />
+            </div>
 
-          {/* Product Image */}
-          <ModalImage product={product} />
+            {/* Product Image */}
+            <ModalImage product={product} />
+          </div>
 
           {/* Content */}
           <div className="p-5 sm:p-8">

@@ -1,7 +1,27 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import CategoryFilter from './CategoryFilter';
 import ProductCard from './ProductCard';
+import PhenylShowcase from './PhenylShowcase';
+import LiquidShowcase from './LiquidShowcase';
+import ProductRecommendations from './ProductRecommendations';
 import { useProductFilter } from '../../hooks/useProductFilter';
+import { products } from '../../data/products';
+
+const getProductById = (id) => products.find(p => p.id === id) || {};
+
+const phenylRecommendations = [
+  { ...getProductById(23), name: 'Toilet Cleaner', category: 'Bathroom Care' }, // id 23 is Toilet Cleaner 5Ltr
+  { ...getProductById(24), name: 'Glass Cleaner', category: 'Surface Care' }, // id 24 is Glass Cleaner 5Ltr
+  { ...getProductById(13), name: 'Hand Wash', category: 'Personal Care' }, // id 13 is Liquid Hand Wash
+  { ...getProductById(7), name: 'Dish Wash Liquid', category: 'Kitchen Care' } // id 7 is Dish Washing Liquid
+];
+
+const liquidRecommendations = [
+  { ...getProductById(8), name: 'Premium White Phenyl', category: 'Floor Care' }, // id 8 is Premium White Phenyl
+  { ...getProductById(12), name: 'Multi-Surface Cleaner', category: 'Surface Care' }, // id 12 is Multi-Surface Cleaner
+  { ...getProductById(16), name: 'Air Freshener', category: 'Home Care' }, // id 16 is Air Freshener
+  { ...getProductById(14), name: 'Liquid Detergent', category: 'Laundry Care' } // id 14 is Premium Liquid Detergent
+];
 
 const ProductsSection = ({ onViewDetails }) => {
   const { activeCategory, setActiveCategory, filteredProducts, categoryCounts } =
@@ -36,27 +56,41 @@ const ProductsSection = ({ onViewDetails }) => {
           />
         </div>
 
-        {/* Product Grid */}
-        <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-          <AnimatePresence mode="popLayout">
-            {filteredProducts.map((product, index) => (
-              <ProductCard
-                key={product.id}
-                product={product}
-                index={index}
-                onViewDetails={onViewDetails}
-              />
-            ))}
-          </AnimatePresence>
-        </motion.div>
+        {/* Product Grid or Showcase */}
+        {activeCategory === 'phenyl' ? (
+          <>
+            <PhenylShowcase onViewDetails={onViewDetails} />
+            <ProductRecommendations recommendations={phenylRecommendations} onViewDetails={onViewDetails} />
+          </>
+        ) : activeCategory === 'liquid' ? (
+          <>
+            <LiquidShowcase onViewDetails={onViewDetails} />
+            <ProductRecommendations recommendations={liquidRecommendations} onViewDetails={onViewDetails} />
+          </>
+        ) : (
+          <>
+            <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+              <AnimatePresence mode="popLayout">
+                {filteredProducts.map((product, index) => (
+                  <ProductCard
+                    key={product.id}
+                    product={product}
+                    index={index}
+                    onViewDetails={onViewDetails}
+                  />
+                ))}
+              </AnimatePresence>
+            </motion.div>
 
-        {/* Products count */}
-        <motion.p
-          layout
-          className="text-center text-sm text-brand-gray mt-8"
-        >
-          Showing {filteredProducts.length} of 17 products
-        </motion.p>
+            {/* Products count */}
+            <motion.p
+              layout
+              className="text-center text-sm text-brand-gray mt-8"
+            >
+              Showing {filteredProducts.length} of {products.length} products
+            </motion.p>
+          </>
+        )}
       </div>
     </section>
   );
