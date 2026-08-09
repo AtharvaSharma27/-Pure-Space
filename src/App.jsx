@@ -1,4 +1,4 @@
-import { useState, lazy, Suspense } from 'react';
+import { useState, lazy, Suspense, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -12,6 +12,28 @@ const ProductModal = lazy(() => import('./components/Products/ProductModal'));
 
 function App() {
   const [selectedProduct, setSelectedProduct] = useState(null);
+
+  useEffect(() => {
+    // Prevent the browser from automatically scrolling down on reload
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    
+    // If there's a hash in the URL (like #about), remove it so it doesn't jump down
+    if (window.location.hash) {
+      window.history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+
+    // Force scroll to the very top with a slight delay for mobile browsers
+    const timer = setTimeout(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      // Fallback for older mobile browsers
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleViewDetails = (product) => {
     setSelectedProduct(product);

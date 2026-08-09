@@ -67,6 +67,53 @@ const ProductsSection = ({ onViewDetails }) => {
             <LiquidShowcase onViewDetails={onViewDetails} />
             <ProductRecommendations recommendations={liquidRecommendations} onViewDetails={onViewDetails} />
           </>
+        ) : activeCategory === 'all' ? (
+          <>
+            {/* Phenyls Section using Showcase */}
+            <div className="mb-16">
+              <h3 className="text-2xl font-semibold text-brand-blue mb-8 text-center sm:text-left px-4">
+                Premium Phenyl Range
+              </h3>
+              <PhenylShowcase onViewDetails={onViewDetails} />
+            </div>
+
+            {/* Liquid Floor Cleaners Section using Showcase */}
+            <div className="mb-16">
+              <h3 className="text-2xl font-semibold text-brand-blue mb-8 text-center sm:text-left px-4">
+                Liquid Floor Cleaners
+              </h3>
+              <LiquidShowcase onViewDetails={onViewDetails} />
+            </div>
+
+            {/* Other Products Section */}
+            <div className="mb-8">
+              <h3 className="text-2xl font-semibold text-brand-blue mb-8 text-center sm:text-left px-4">
+                Other Cleaning Solutions
+              </h3>
+              <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+                <AnimatePresence mode="popLayout">
+                  {filteredProducts
+                    .filter((product) => product.category !== 'phenyl' && product.category !== 'liquid')
+                    .map((product, index) => (
+                    <ProductCard
+                      key={product.id}
+                      product={product}
+                      index={index}
+                      onViewDetails={onViewDetails}
+                    />
+                  ))}
+                </AnimatePresence>
+              </motion.div>
+            </div>
+
+            {/* Products count */}
+            <motion.p
+              layout
+              className="text-center text-sm text-brand-gray mt-8"
+            >
+              Showing {filteredProducts.length} of {products.length} products
+            </motion.p>
+          </>
         ) : (
           <>
             <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">

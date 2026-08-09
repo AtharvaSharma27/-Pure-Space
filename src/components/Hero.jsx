@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden pt-20 sm:pt-0"
+      className="relative min-h-[100dvh] lg:min-h-screen flex items-start sm:items-center justify-center sm:justify-start overflow-hidden pt-24 sm:pt-0 pb-12 sm:pb-0"
       style={{
         background: 'radial-gradient(ellipse at 30% 20%, #EBF4FF 0%, #F0FAF9 50%, #F8FAFB 100%)',
       }}
