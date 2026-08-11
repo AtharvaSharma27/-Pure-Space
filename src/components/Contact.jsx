@@ -108,13 +108,9 @@ const Contact = () => {
           style={{ textDecoration: 'none' }}
         >
           <div className="flex items-center gap-4">
-            {/* IndiaMART logo mark */}
-            <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md"
-              style={{ background: 'linear-gradient(135deg, #F97316, #EA580C)' }}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-                <path d="M3 3h7v2H5v14h14v-5h2v7H3V3z"/>
-                <path d="M13 3h8v8h-2V6.414l-9.293 9.293-1.414-1.414L17.586 5H13V3z"/>
-              </svg>
+            {/* Business logo mark */}
+            <div className="w-20 h-20 flex items-center justify-center flex-shrink-0 -ml-2">
+              <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="Pure Space Logo" className="w-[140%] max-w-none h-auto object-contain scale-125" />
             </div>
             <div>
               <p className="text-sm font-bold text-brand-dark">Find us on IndiaMART</p>
