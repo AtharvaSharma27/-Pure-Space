@@ -97,9 +97,20 @@ const ProductModal = ({ product, onClose, onGetQuote }) => {
               <h2 className="text-xl sm:text-2xl font-bold text-brand-blue">
                 {product.name}
               </h2>
-              <span className="text-lg sm:text-xl font-bold text-brand-amber bg-brand-amber/10 px-3 py-1 rounded-lg">
-                {product.price}
-              </span>
+              {product.price === "Contact for Best Price" || product.price === "Contact for best Price" ? (
+                <a 
+                  href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER || '919876543210'}?text=${encodeURIComponent('Hi, I am interested in the best price for ' + product.name)}`}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-lg sm:text-xl font-bold text-brand-amber bg-brand-amber/10 px-3 py-1 rounded-lg hover:bg-brand-amber/20 transition-colors block"
+                >
+                  {product.price}
+                </a>
+              ) : (
+                <span className="text-lg sm:text-xl font-bold text-brand-amber bg-brand-amber/10 px-3 py-1 rounded-lg">
+                  {product.price}
+                </span>
+              )}
             </div>
 
             {/* Fragrance chip - large */}

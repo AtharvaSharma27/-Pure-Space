@@ -50,10 +50,10 @@ const Footer = () => {
             <h4 className="text-base font-semibold text-white mb-4">Products</h4>
             <ul className="space-y-2.5">
               {[
-                { label: 'Floor Cleaner (Phenyl)', href: '#products' },
-                { label: 'Liquid Floor Cleaner', href: '#products' },
-                { label: 'Glass Cleaner', href: '#products' },
-                { label: 'New Items', href: '#products' },
+                { label: 'Floor Cleaner (Phenyl)', href: '#phenyl-range' },
+                { label: 'Liquid Floor Cleaner', href: '#liquid-cleaners' },
+                { label: 'Glass Cleaner', href: '#other-products' },
+                { label: 'New Items', href: '#other-products' },
               ].map((item) => (
                 <li key={item.label}>
                   <a

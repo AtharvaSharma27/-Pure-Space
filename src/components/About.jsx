@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 import { ShieldCheck, Trees, Flower2, Leaf, Package, Flag, Building2, Droplets } from 'lucide-react';
 
 const trustBadges = [
-  { icon: ShieldCheck, label: 'Kills 99.9% Germs' },
+  { icon: ShieldCheck, label: 'Clean 99.9% Germs' },
   { icon: Trees, label: 'Pine Oil Base Formula' },
-  { icon: Flower2, label: '6+ Unique Fragrances' },
+  { icon: Flower2, label: '6+ Natural Fragrances' },
   { icon: Leaf, label: 'Eco-Friendly Options' },
   { icon: Package, label: 'Bulk Supply Available' },
   { icon: Flag, label: 'Made in India' },

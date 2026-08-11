@@ -5,7 +5,7 @@ import ShowcaseCard from './ShowcaseCard';
 const variants1L = [
   {
     name: 'Rose',
-    fullName: 'Rose Floor Cleaner 1L',
+    fullName: 'Rose Floor Cleaner',
     price: 'Contact for Best Price',
     fragrance: 'rose',
     image: '/products/pdf5_product_4.png',
@@ -14,7 +14,7 @@ const variants1L = [
   },
   {
     name: 'Lemon',
-    fullName: 'Lemon Floor Cleaner 1L',
+    fullName: 'Lemon Floor Cleaner',
     price: 'Contact for Best Price',
     fragrance: 'lemon',
     image: '/products/pdf5_product_5.png',
@@ -23,7 +23,7 @@ const variants1L = [
   },
   {
     name: 'Jasmine',
-    fullName: 'Jasmine Floor Cleaner 1L',
+    fullName: 'Jasmine Floor Cleaner',
     price: 'Contact for Best Price',
     fragrance: 'jasmine',
     image: '/products/pdf6_product_4.png',
@@ -35,7 +35,7 @@ const variants1L = [
 const variants5L = [
   {
     name: 'Rose',
-    fullName: 'Rose Floor Cleaner 5L',
+    fullName: 'Rose Floor Cleaner',
     price: 'Contact for Best Price',
     fragrance: 'rose',
     image: '/products/new_product_2_0.png',
@@ -44,7 +44,7 @@ const variants5L = [
   },
   {
     name: 'Lemon',
-    fullName: 'Lemon Floor Cleaner 5L',
+    fullName: 'Lemon Floor Cleaner',
     price: 'Contact for Best Price',
     fragrance: 'lemon',
     image: '/products/lemon_cleaner_extracted.png',
@@ -53,7 +53,7 @@ const variants5L = [
   },
   {
     name: 'Jasmine',
-    fullName: 'Jasmine Floor Cleaner 5L',
+    fullName: 'Jasmine Floor Cleaner',
     price: 'Contact for Best Price',
     fragrance: 'jasmine',
     image: '/products/pdf6_product_2.png',
@@ -62,7 +62,7 @@ const variants5L = [
   },
   {
     name: 'Power Wipe',
-    fullName: 'Power Wipe Cleaner 5L',
+    fullName: 'Power Wipe Cleaner',
     price: 'Contact for Best Price',
     fragrance: 'rose',
     image: '/products/power_wipe_extracted.png',
@@ -81,8 +81,8 @@ const LiquidShowcase = ({ onViewDetails }) => {
       className="w-full max-w-5xl mx-auto"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <ShowcaseCard variants={variants1L} />
-        <ShowcaseCard variants={variants5L} />
+        <ShowcaseCard variants={variants1L} size="1 Ltr" />
+        <ShowcaseCard variants={variants5L} size="5 Ltr" />
       </div>
     </motion.div>
   );

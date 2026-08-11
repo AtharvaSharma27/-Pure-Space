@@ -70,7 +70,7 @@ const ProductsSection = ({ onViewDetails }) => {
         ) : activeCategory === 'all' ? (
           <>
             {/* Phenyls Section using Showcase */}
-            <div className="mb-16">
+            <div id="phenyl-range" className="mb-16">
               <h3 className="text-2xl font-semibold text-brand-blue mb-8 text-center sm:text-left px-4">
                 Premium Phenyl Range
               </h3>
@@ -78,7 +78,7 @@ const ProductsSection = ({ onViewDetails }) => {
             </div>
 
             {/* Liquid Floor Cleaners Section using Showcase */}
-            <div className="mb-16">
+            <div id="liquid-cleaners" className="mb-16">
               <h3 className="text-2xl font-semibold text-brand-blue mb-8 text-center sm:text-left px-4">
                 Liquid Floor Cleaners
               </h3>
@@ -86,7 +86,7 @@ const ProductsSection = ({ onViewDetails }) => {
             </div>
 
             {/* Other Products Section */}
-            <div className="mb-8">
+            <div id="other-products" className="mb-8">
               <h3 className="text-2xl font-semibold text-brand-blue mb-8 text-center sm:text-left px-4">
                 Other Cleaning Solutions
               </h3>

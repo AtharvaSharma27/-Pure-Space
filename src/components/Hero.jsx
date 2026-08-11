@@ -126,7 +126,7 @@ const Hero = () => {
               {[
                 { value: '24', label: 'Products' },
                 { value: '4', label: 'Categories' },
-                { value: '99.9%', label: 'Germ-Kill' },
+                { value: 'Clean 99.9%', label: 'Germs' },
                 { value: 'Bulk', label: 'Supply' },
               ].map((stat) => (
                 <div key={stat.label} className="flex items-baseline gap-1.5">
@@ -176,7 +176,7 @@ const Hero = () => {
                 <div className="flex items-center gap-2">
                   <span className="text-2xl">🦠</span>
                   <div>
-                    <p className="text-xs font-semibold text-brand-dark">99.9% Germ Kill</p>
+                    <p className="text-xs font-semibold text-brand-dark">Clean 99.9% Germs</p>
                     <p className="text-[10px] text-brand-gray">Hospital Grade</p>
                   </div>
                 </div>

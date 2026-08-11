@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 const features = [
-  { emoji: '🦠', title: 'Kills 99.9% Germs', desc: 'Hospital-grade disinfection in every product' },
+  { emoji: '🦠', title: 'Clean 99.9% Germs', desc: 'Hospital-grade disinfection in every product' },
   { emoji: '🌲', title: 'Pine Oil Base', desc: 'Authentic pine-oil for genuine germ kill' },
   { emoji: '🌸', title: 'Rich Fragrances', desc: '6+ unique fragrances — Lemon, Lavender, Rose, Camphor, Pine, Lemongrass' },
   { emoji: '💧', title: 'Ready-to-Use', desc: 'No dilution needed — just apply and clean' },

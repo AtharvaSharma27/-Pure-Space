@@ -302,7 +302,7 @@ export const products = [
       "Ultra-Stable Emulsion",
       "Premium for use"
     ],
-    "packSize": "250ml",
+    "packSize": "500ml",
     "form": "Liquid Spray",
     "baseIngredient": "Chemical",
     "usageAreas": [
@@ -318,7 +318,7 @@ export const products = [
   {
     "id": 13,
     "category": "new",
-    "name": "Liquid Hand Wash",
+    "name": "Liquid Wash",
     "price": "Contact for Best Price",
     "minOrder": "20 Bottles",
     "fragrance": "mixfruit",
@@ -353,12 +353,12 @@ export const products = [
     "fragrance": "fresh",
     "fragranceLabel": "Fresh",
     "color": "White",
-    "image": "https://5.imimg.com/data5/SELLER/Default/2026/6/613414322/GO/XM/IG/236310401/liquid-detergent-500x500.jpg",
+    "image": "/products/pdf8_img0_0.png",
     "imagePlaceholderColor": "#F3F4F6",
     "features": [
       "Color Care",
       "Front & Top Load",
-      "Machine & Hand Wash"
+      "Machine Wash Only"
     ],
     "packSize": "1L",
     "form": "Liquid",
@@ -383,7 +383,7 @@ export const products = [
     "fragrance": "rose",
     "fragranceLabel": "Rose",
     "color": "Clear",
-    "image": "https://5.imimg.com/data5/SELLER/Default/2026/6/613415092/RQ/NC/NL/236310401/air-freshener-500x500.jpg",
+    "image": "/products/pdf8_img4_0.png",
     "imagePlaceholderColor": "#FCE4EC",
     "features": [
       "Odour Neutralizer",
@@ -413,7 +413,7 @@ export const products = [
     "fragrance": "lemon",
     "fragranceLabel": "Lemon",
     "color": "Yellow",
-    "image": "https://5.imimg.com/data5/SELLER/Default/2026/6/613414688/BC/NU/JV/236310401/liquid-dishwasher-500x500.jpg",
+    "image": "/products/pdf8_img2_0.png",
     "imagePlaceholderColor": "#FFFDE7",
     "features": [
       "Grease Cutter",

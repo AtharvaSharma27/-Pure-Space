@@ -23,7 +23,7 @@ const ProductCard = ({ product, index, onViewDetails }) => {
       className="group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl hover:border-brand-teal/20 transition-all duration-300 hover:-translate-y-1 flex flex-col"
     >
       {/* Image */}
-      <div className="relative aspect-square overflow-hidden">
+      <div className="relative w-full aspect-square overflow-hidden">
         {product.badge && (
           <span
             className={`absolute top-3 right-3 z-10 px-3 py-1 rounded-full text-xs font-bold shadow-md ${
@@ -45,7 +45,7 @@ const ProductCard = ({ product, index, onViewDetails }) => {
           style={{ backgroundColor: frag.bg, color: frag.color }}
         >
           <span>{frag.emoji}</span>
-          <span>{frag.label}</span>
+          <span>{product.fragranceLabel || frag.label}</span>
         </div>
 
         {/* Product Name */}
@@ -54,9 +54,20 @@ const ProductCard = ({ product, index, onViewDetails }) => {
         </h3>
 
         {/* Price */}
-        <p className="text-base sm:text-xl font-bold text-brand-amber mb-3">
-          {product.price}
-        </p>
+        {product.price === "Contact for Best Price" ? (
+          <a 
+            href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER || '919876543210'}?text=${encodeURIComponent('Hi, I am interested in the best price for ' + product.name)}`}
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-base sm:text-xl font-bold text-brand-amber mb-3 hover:underline cursor-pointer block"
+          >
+            {product.price}
+          </a>
+        ) : (
+          <p className="text-base sm:text-xl font-bold text-brand-amber mb-3">
+            {product.price}
+          </p>
+        )}
 
         {/* Features */}
         <div className="flex flex-wrap gap-1.5 mb-3">

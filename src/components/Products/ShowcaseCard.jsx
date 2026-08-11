@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Camera, CheckCircle2, Sparkles } from 'lucide-react';
+import { Camera, CheckCircle2, Sparkles, Package } from 'lucide-react';
 
 const ProductImage = ({ variant }) => {
   const [imgError, setImgError] = useState(false);
@@ -33,20 +33,37 @@ const ProductImage = ({ variant }) => {
   );
 };
 
-const ShowcaseCard = ({ variants }) => {
+const ShowcaseCard = ({ variants, size = "1 Ltr" }) => {
   const [selectedVariant, setSelectedVariant] = useState(variants[0]);
 
   return (
     <div className="group bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-brand-teal/30 transition-all duration-300 hover:-translate-y-1 p-5 flex flex-col h-full">
       {/* Main Product Image Area */}
-      <div className="relative aspect-square overflow-hidden rounded-xl border border-gray-100 bg-gray-50/50 mb-5 cursor-pointer flex-shrink-0 group-hover:shadow-inner transition-all duration-500">
+      <div className="relative w-full aspect-square overflow-hidden rounded-xl border border-gray-100 bg-gray-50/50 mb-5 cursor-pointer flex-shrink-0 group-hover:shadow-inner transition-all duration-500">
         <ProductImage variant={selectedVariant} />
       </div>
 
       {/* Main Product Info */}
       <div className="text-left mb-4 flex-shrink-0">
         <h2 className="text-xl font-bold text-brand-blue mb-1 leading-tight">{selectedVariant.fullName}</h2>
-        <div className="text-lg font-bold text-brand-amber">{selectedVariant.price}</div>
+        <div className="text-lg font-bold text-brand-amber">
+          {selectedVariant.price === "Contact for Best Price" ? (
+            <a
+              href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER || '919876543210'}?text=${encodeURIComponent('Hi, I am interested in the best price for ' + selectedVariant.fullName)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-brand-teal transition-colors underline decoration-brand-amber/30 hover:decoration-brand-teal underline-offset-4"
+            >
+              {selectedVariant.price}
+            </a>
+          ) : (
+            selectedVariant.price
+          )}
+        </div>
+        <div className="flex items-center gap-1.5 mt-2.5 text-sm text-brand-blue/80 font-medium">
+          <Package size={16} className="text-brand-gray/80" />
+          <span>{size}</span>
+        </div>
       </div>
 
       {/* Premium Variant Selector */}
