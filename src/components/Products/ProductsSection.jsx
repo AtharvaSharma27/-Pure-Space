@@ -85,6 +85,27 @@ const ProductsSection = ({ onViewDetails }) => {
               <LiquidShowcase onViewDetails={onViewDetails} />
             </div>
 
+            {/* Glass Cleaners Section */}
+            <div id="glass-cleaners" className="mb-16">
+              <h3 className="text-2xl font-semibold text-brand-blue mb-8 text-center sm:text-left px-4">
+                Glass Cleaners
+              </h3>
+              <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+                <AnimatePresence mode="popLayout">
+                  {filteredProducts
+                    .filter((product) => product.category === 'glass')
+                    .map((product, index) => (
+                    <ProductCard
+                      key={product.id}
+                      product={product}
+                      index={index}
+                      onViewDetails={onViewDetails}
+                    />
+                  ))}
+                </AnimatePresence>
+              </motion.div>
+            </div>
+
             {/* Other Products Section */}
             <div id="other-products" className="mb-8">
               <h3 className="text-2xl font-semibold text-brand-blue mb-8 text-center sm:text-left px-4">
@@ -93,7 +114,7 @@ const ProductsSection = ({ onViewDetails }) => {
               <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
                 <AnimatePresence mode="popLayout">
                   {filteredProducts
-                    .filter((product) => product.category !== 'phenyl' && product.category !== 'liquid')
+                    .filter((product) => product.category !== 'phenyl' && product.category !== 'liquid' && product.category !== 'glass')
                     .map((product, index) => (
                     <ProductCard
                       key={product.id}

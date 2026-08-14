@@ -52,6 +52,7 @@ const Footer = () => {
               {[
                 { label: 'Floor Cleaner (Phenyl)', href: '#phenyl-range' },
                 { label: 'Liquid Floor Cleaner', href: '#liquid-cleaners' },
+                { label: 'Glass Cleaner', href: '#glass-cleaners' },
                 { label: 'Other Cleaning Solutions', href: '#other-products' },
               ].map((item) => (
                 <li key={item.label}>
