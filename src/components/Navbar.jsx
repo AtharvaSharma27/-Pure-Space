@@ -56,7 +56,7 @@ const Navbar = () => {
               alt="Pure Space Cleaners" 
               className="h-16 sm:h-20 w-auto object-contain" 
             />
-            <span className="text-lg sm:text-2xl font-bold text-brand-blue hidden sm:block">Pure Space Cleaners</span>
+            <span className="text-lg sm:text-2xl font-bold text-brand-blue">Pure Space Cleaners</span>
           </a>
 
           {/* Desktop Nav */}

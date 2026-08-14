@@ -3,12 +3,12 @@
 @theme {
   --font-poppins: 'Poppins', sans-serif;
 
-  --color-brand-blue: #8B6508; /* Dark Goldenrod / Bronze (Primary accent) */
-  --color-brand-teal: #CD950C; /* Lighter Gold (Secondary accent) */
-  --color-brand-amber: #DAA520; /* Golden highlight */
-  --color-brand-bg-light: #FEF9E7; /* Diffused pale yellow-cream background */
-  --color-brand-dark: #4A3511; /* Deep bronze/brown for text and headings */
-  --color-brand-gray: #8B7D6B; /* Warm muted brown for secondary text */
+  --color-brand-blue: #1A4B8C;
+  --color-brand-teal: #0E7C7B;
+  --color-brand-amber: #F0A500;
+  --color-brand-bg-light: #F8FAFB;
+  --color-brand-dark: #1A1A1A;
+  --color-brand-gray: #666666;
 
   --color-fragrance-pine: #2D6A4F;
   --color-fragrance-camphor: #8ECAE6;
@@ -18,6 +18,36 @@
   --color-fragrance-mixfruit: #F8A055;
   --color-fragrance-fresh: #74C0FC;
   --color-fragrance-none: #ADB5BD;
+}
+
+/* Blue Theme (Default) */
+[data-theme="blue"] {
+  --color-brand-blue: #1A4B8C;
+  --color-brand-teal: #0E7C7B;
+  --color-brand-amber: #F0A500;
+  --color-brand-bg-light: #F8FAFB;
+  --color-brand-dark: #1A1A1A;
+  --color-brand-gray: #666666;
+}
+
+/* Yellow Theme */
+[data-theme="yellow"] {
+  --color-brand-blue: #8B6508;
+  --color-brand-teal: #CD950C;
+  --color-brand-amber: #DAA520;
+  --color-brand-bg-light: #FEF9E7;
+  --color-brand-dark: #4A3511;
+  --color-brand-gray: #8B7D6B;
+}
+
+/* White Theme */
+[data-theme="white"] {
+  --color-brand-blue: #333333;
+  --color-brand-teal: #666666;
+  --color-brand-amber: #999999;
+  --color-brand-bg-light: #FFFFFF;
+  --color-brand-dark: #111111;
+  --color-brand-gray: #888888;
 }
 
 /* Smooth scrolling */

@@ -7,6 +7,7 @@ import WhyUs from './components/WhyUs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppFAB from './components/WhatsAppFAB';
+import ThemeSwitcher from './components/ThemeSwitcher';
 
 const ProductModal = lazy(() => import('./components/Products/ProductModal'));
 
@@ -62,6 +63,7 @@ function App() {
       <Contact />
       <Footer />
       <WhatsAppFAB />
+      <ThemeSwitcher />
 
       <Suspense fallback={null}>
         {selectedProduct && (
