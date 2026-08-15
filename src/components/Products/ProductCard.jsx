@@ -55,14 +55,16 @@ const ProductCard = ({ product, index, onViewDetails }) => {
 
         {/* Price */}
         {product.price === "Contact for Best Price" ? (
-          <a 
-            href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER || '919876543210'}?text=${encodeURIComponent('Hi, I am interested in the best price for ' + product.name)}`}
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-base sm:text-xl font-bold text-brand-amber mb-3 hover:underline cursor-pointer block"
-          >
-            {product.price}
-          </a>
+          <div className="mb-3">
+            <a 
+              href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER || '919876543210'}?text=${encodeURIComponent('Hi, I am interested in the best price for ' + product.name)}`}
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block bg-brand-amber/10 hover:bg-brand-amber/20 text-brand-amber text-sm sm:text-base font-bold px-3 py-1.5 rounded-lg transition-colors border border-brand-amber/20 shadow-sm cursor-pointer"
+            >
+              {product.price}
+            </a>
+          </div>
         ) : (
           <p className="text-base sm:text-xl font-bold text-brand-amber mb-3">
             {product.price}
