@@ -15,6 +15,8 @@ const ProductImage = ({ variant }) => {
       <img
         src={variant.image.startsWith("/") ? `${import.meta.env.BASE_URL}${variant.image.slice(1)}` : variant.image}
         alt={variant.fullName}
+        loading="lazy"
+        decoding="async"
         className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500"
         onError={() => setImgError(true)}
       />

@@ -92,8 +92,10 @@ const Hero = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-gray-200 to-slate-200 rounded-2xl blur-md opacity-40 group-hover:opacity-60 transition duration-500"></div>
               <img 
-                src={`${import.meta.env.BASE_URL}images/offer-banner.png`} 
+                src={`${import.meta.env.BASE_URL}images/offer-banner.webp`} 
                 alt="Limited Time Offer - Products starting from 59/-" 
+                loading="lazy"
+                decoding="async"
                 className="relative rounded-2xl shadow-xl border border-gray-200 object-contain w-full max-w-[450px]"
               />
             </motion.div>
