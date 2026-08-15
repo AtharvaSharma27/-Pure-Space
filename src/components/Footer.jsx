@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <p className="text-sm text-brand-teal font-medium mb-4">
-              Clean Spaces. Pure Living.
+              Pure space Enjoy your space
             </p>
             <p className="text-sm text-gray-400 leading-relaxed mb-6">
               India's premium cleaning solutions brand — trusted by homes, hospitals, and businesses.
@@ -53,7 +53,7 @@ const Footer = () => {
                 { label: 'Floor Cleaner (Phenyl)', href: '#phenyl-range' },
                 { label: 'Liquid Floor Cleaner', href: '#liquid-cleaners' },
                 { label: 'Glass Cleaner', href: '#glass-cleaners' },
-                { label: 'Other Cleaning Solutions', href: '#other-products' },
+                { label: 'Other Cleaning Products', href: '#other-products' },
               ].map((item) => (
                 <li key={item.label}>
                   <a

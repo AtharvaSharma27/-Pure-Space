@@ -577,7 +577,7 @@ export const products = [
   {
     "id": 23,
     "category": "new",
-    "name": "Toilet Cleaner 5Ltr",
+    "name": "Toilet Cleaner",
     "price": "Contact for Best Price",
     "minOrder": null,
     "fragrance": "fresh",
@@ -604,7 +604,7 @@ export const products = [
   {
     "id": 24,
     "category": "glass",
-    "name": "Glass Cleaner 5Ltr",
+    "name": "Glass Cleaner",
     "price": "Contact for Best Price",
     "minOrder": null,
     "fragrance": "fresh",

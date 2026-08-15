@@ -7,7 +7,7 @@ const Hero = () => {
       id="home"
       className="relative min-h-[100dvh] lg:min-h-screen flex items-start sm:items-center justify-center sm:justify-start overflow-hidden pt-24 sm:pt-0 pb-12 sm:pb-0"
       style={{
-        background: 'radial-gradient(ellipse at 30% 20%, #EBF4FF 0%, #F0FAF9 50%, #F8FAFB 100%)',
+        background: 'radial-gradient(ellipse at 30% 20%, #FEF9C3 0%, #FEFCE8 50%, #FFFFFF 100%)',
       }}
     >
       {/* Animated background shapes */}
@@ -69,11 +69,10 @@ const Hero = () => {
             </motion.div>
 
             {/* Heading */}
-            <h1 className="text-[40px] sm:text-5xl lg:text-[64px] font-bold text-brand-blue leading-[1.1] mb-4 sm:mb-6">
-              Clean Spaces.
-              <br />
-              <span className="bg-gradient-to-r from-brand-blue to-brand-teal bg-clip-text text-transparent">
-                Pure Living.
+            <h1 className="text-[40px] sm:text-5xl lg:text-[64px] font-bold text-brand-blue leading-[1.1] mb-4 sm:mb-6 flex flex-col gap-1 sm:gap-2">
+              <span>Pure space</span>
+              <span className="text-2xl sm:text-3xl lg:text-4xl font-medium bg-gradient-to-r from-brand-blue to-brand-teal bg-clip-text text-transparent">
+                Enjoy Your Space
               </span>
             </h1>
 
@@ -87,15 +86,22 @@ const Hero = () => {
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.02 }}
               transition={{ delay: 0.4 }}
-              className="bg-yellow-50/90 border border-yellow-200 rounded-xl p-4 mb-8 shadow-sm inline-block"
+              className="relative group mb-8 inline-block"
             >
-              <p className="font-bold text-red-600 text-lg sm:text-xl mb-1">
-                🔥 1Ltr starting from ₹49/- and 5Ltr starting from ₹199/- only!
-              </p>
-              <p className="text-sm sm:text-base text-brand-teal font-semibold">
-                Best quality at lowest prices & Cheapest price in bulk all over India.
-              </p>
+              <div className="absolute inset-0 bg-gradient-to-r from-gray-200 to-slate-200 rounded-2xl blur-md opacity-40 group-hover:opacity-60 transition duration-500"></div>
+              <div className="relative bg-[#FAF9F6]/90 backdrop-blur-xl border border-gray-200 rounded-2xl p-5 shadow-xl flex flex-col items-start gap-2">
+                <div className="flex items-center gap-2 bg-brand-teal/10 px-3 py-1 rounded-full border border-brand-teal/20">
+                  <span className="animate-pulse">✨</span>
+                  <span className="font-bold text-brand-teal text-xs sm:text-sm tracking-widest uppercase">
+                    Limited Time Offer
+                  </span>
+                </div>
+                <p className="text-xl sm:text-2xl font-black text-brand-blue tracking-tight">
+                  Products starting from <span className="bg-gradient-to-r from-brand-blue to-brand-teal bg-clip-text text-transparent">₹59/-</span>
+                </p>
+              </div>
             </motion.div>
 
             {/* CTA Buttons */}

@@ -109,7 +109,7 @@ const ProductsSection = ({ onViewDetails }) => {
             {/* Other Products Section */}
             <div id="other-products" className="mb-8">
               <h3 className="text-2xl font-semibold text-brand-blue mb-8 text-center sm:text-left px-4">
-                Other Cleaning Solutions
+                Other Cleaning Products
               </h3>
               <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
                 <AnimatePresence mode="popLayout">
