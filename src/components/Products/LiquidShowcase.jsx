@@ -81,8 +81,8 @@ const LiquidShowcase = ({ onViewDetails }) => {
       className="w-full max-w-5xl mx-auto"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <ShowcaseCard variants={variants1L} size="1 Ltr" />
-        <ShowcaseCard variants={variants5L} size="5 Ltr" />
+        <ShowcaseCard variants={variants1L} size="1 Ltr" onViewDetails={onViewDetails} />
+        <ShowcaseCard variants={variants5L} size="5 Ltr" onViewDetails={onViewDetails} />
       </div>
     </motion.div>
   );

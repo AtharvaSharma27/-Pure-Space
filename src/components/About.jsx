@@ -38,6 +38,21 @@ const About = () => {
               From powerful disinfectants to rich-fragranced floor cleaners — every Pure Space Cleaners
               product is crafted to leave your spaces genuinely clean, fresh, and safe.
             </p>
+
+            {/* Trust Stats (Moved from Hero) */}
+            <div className="flex flex-wrap gap-x-6 gap-y-3 mt-8 pt-6 border-t border-gray-100">
+              {[
+                { value: '24', label: 'Products' },
+                { value: '4', label: 'Categories' },
+                { value: 'Clean 99.9%', label: 'Germs' },
+                { value: 'Bulk', label: 'Supply' },
+              ].map((stat) => (
+                <div key={stat.label} className="flex items-baseline gap-1.5">
+                  <span className="text-xl sm:text-2xl font-bold text-brand-blue">{stat.value}</span>
+                  <span className="text-sm text-brand-gray">{stat.label}</span>
+                </div>
+              ))}
+            </div>
           </motion.div>
 
           {/* Trust Badges */}

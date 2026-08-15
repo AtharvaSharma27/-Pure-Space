@@ -82,26 +82,20 @@ const Hero = () => {
               hygiene solutions — for homes, offices & industries.
             </p>
             
-            {/* Promotional Highlight */}
+            {/* Promotional Highlight Image */}
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               whileHover={{ scale: 1.02 }}
               transition={{ delay: 0.4 }}
-              className="relative group mb-8 inline-block"
+              className="relative group mb-8 inline-block max-w-full"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-gray-200 to-slate-200 rounded-2xl blur-md opacity-40 group-hover:opacity-60 transition duration-500"></div>
-              <div className="relative bg-[#FAF9F6]/90 backdrop-blur-xl border border-gray-200 rounded-2xl p-5 shadow-xl flex flex-col items-start gap-2">
-                <div className="flex items-center gap-2 bg-brand-teal/10 px-3 py-1 rounded-full border border-brand-teal/20">
-                  <span className="animate-pulse">✨</span>
-                  <span className="font-bold text-brand-teal text-xs sm:text-sm tracking-widest uppercase">
-                    Limited Time Offer
-                  </span>
-                </div>
-                <p className="text-xl sm:text-2xl font-black text-brand-blue tracking-tight">
-                  Products starting from <span className="bg-gradient-to-r from-brand-blue to-brand-teal bg-clip-text text-transparent">₹59/-</span>
-                </p>
-              </div>
+              <img 
+                src={`${import.meta.env.BASE_URL}images/offer-banner.png`} 
+                alt="Limited Time Offer - Products starting from 59/-" 
+                className="relative rounded-2xl shadow-xl border border-gray-200 object-contain w-full max-w-[450px]"
+              />
             </motion.div>
 
             {/* CTA Buttons */}
@@ -122,25 +116,7 @@ const Hero = () => {
               </a>
             </div>
 
-            {/* Trust Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.6 }}
-              className="flex flex-wrap gap-x-4 gap-y-2 sm:gap-x-6"
-            >
-              {[
-                { value: '24', label: 'Products' },
-                { value: '4', label: 'Categories' },
-                { value: 'Clean 99.9%', label: 'Germs' },
-                { value: 'Bulk', label: 'Supply' },
-              ].map((stat) => (
-                <div key={stat.label} className="flex items-baseline gap-1.5">
-                  <span className="text-lg sm:text-xl font-bold text-brand-blue">{stat.value}</span>
-                  <span className="text-xs sm:text-sm text-brand-gray">{stat.label}</span>
-                </div>
-              ))}
-            </motion.div>
+
           </motion.div>
 
           {/* Hero Image Placeholder */}

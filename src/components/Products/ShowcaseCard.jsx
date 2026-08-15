@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Camera, CheckCircle2, Sparkles, Package } from 'lucide-react';
+import { products } from '../../data/products';
 
 const ProductImage = ({ variant }) => {
   const [imgError, setImgError] = useState(false);
@@ -33,7 +34,7 @@ const ProductImage = ({ variant }) => {
   );
 };
 
-const ShowcaseCard = ({ variants, size = "1 Ltr" }) => {
+const ShowcaseCard = ({ variants, size = "1 Ltr", onViewDetails }) => {
   const [selectedVariant, setSelectedVariant] = useState(variants[0]);
 
   return (
@@ -46,18 +47,18 @@ const ShowcaseCard = ({ variants, size = "1 Ltr" }) => {
       {/* Main Product Info */}
       <div className="text-left mb-4 flex-shrink-0">
         <h2 className="text-xl font-bold text-brand-blue mb-1 leading-tight">{selectedVariant.fullName}</h2>
-        <div className="text-lg font-bold text-brand-amber">
+        <div className="mt-1">
           {selectedVariant.price === "Contact for Best Price" ? (
             <a
               href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER || '919876543210'}?text=${encodeURIComponent('Hi, I am interested in the best price for ' + selectedVariant.fullName)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-brand-teal transition-colors underline decoration-brand-amber/30 hover:decoration-brand-teal underline-offset-4"
+              className="inline-block bg-brand-amber/10 hover:bg-brand-amber/20 text-brand-amber text-sm font-bold px-3 py-1.5 rounded-lg transition-colors border border-brand-amber/20 shadow-sm"
             >
-              {selectedVariant.price}
+              Contact for Best Price
             </a>
           ) : (
-            selectedVariant.price
+            <span className="text-lg font-bold text-brand-amber">{selectedVariant.price}</span>
           )}
         </div>
         <div className="flex items-center gap-1.5 mt-2.5 text-sm text-brand-blue/80 font-medium">
@@ -108,7 +109,7 @@ const ShowcaseCard = ({ variants, size = "1 Ltr" }) => {
       </div>
       
       {/* Premium Properties / Features */}
-      <div className="bg-gradient-to-br from-brand-teal/5 to-brand-blue/5 p-4 sm:p-5 rounded-2xl border border-brand-teal/10 mt-auto shadow-sm">
+      <div className="bg-gradient-to-br from-brand-teal/5 to-brand-blue/5 p-4 sm:p-5 rounded-2xl border border-brand-teal/10 mt-auto shadow-sm mb-4">
         <div className="flex items-center gap-2 mb-3">
           <Sparkles size={16} className="text-brand-amber" />
           <h4 className="text-sm font-bold text-brand-blue">Key Features</h4>
@@ -122,6 +123,45 @@ const ShowcaseCard = ({ variants, size = "1 Ltr" }) => {
           ))}
         </ul>
       </div>
+
+      {/* View Details Button */}
+      {onViewDetails && (
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            
+            // Try to find the actual product from data to get description and color
+            let matchedProduct = products.find(p => p.name === selectedVariant.fullName && p.packSize?.includes(size));
+            if (!matchedProduct) {
+              matchedProduct = products.find(p => p.name.includes(selectedVariant.fullName));
+            }
+            if (!matchedProduct) {
+               matchedProduct = products.find(p => selectedVariant.fullName.includes(p.name));
+            }
+
+            onViewDetails({
+              id: selectedVariant.fullName,
+              name: selectedVariant.fullName,
+              description: matchedProduct?.description || `Experience the premium quality of ${selectedVariant.fullName}. Specially formulated for effective cleaning.`,
+              price: selectedVariant.price,
+              image: selectedVariant.image,
+              imagePlaceholderColor: selectedVariant.imagePlaceholderColor,
+              features: selectedVariant.features,
+              packSize: size,
+              fragrance: selectedVariant.fragrance,
+              fragranceLabel: selectedVariant.name,
+              color: matchedProduct?.color || "Standard",
+              form: matchedProduct?.form || "Liquid",
+              baseIngredient: matchedProduct?.baseIngredient || "Chemical",
+              packagingType: matchedProduct?.packagingType || "Bottle/Can",
+              usageAreas: matchedProduct?.usageAreas || ["Floors", "Surfaces"]
+            });
+          }}
+          className="w-full mt-auto bg-brand-teal/10 hover:bg-brand-teal/20 text-brand-teal font-semibold py-3 px-4 rounded-xl transition-colors duration-300 flex items-center justify-center gap-2"
+        >
+          View Details
+        </button>
+      )}
     </div>
   );
 };
