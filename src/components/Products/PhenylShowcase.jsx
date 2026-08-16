@@ -6,96 +6,96 @@ import ShowcaseCard from './ShowcaseCard';
 const variants1L = [
   {
     name: 'Pine',
-    fullName: 'Premium White Phenyl',
+    fullName: 'White Phenyl',
     price: 'Contact for Best Price',
     fragrance: 'pine',
     image: '/products/new_product_9_0.jpeg',
     imagePlaceholderColor: '#E8F5E9',
-    features: ['Cost-Efficient Concentration', 'Surface Versatility', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Premium for use']
+    features: ['Cost-Efficient Concentration', 'Surface Versatility', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Safe for daily use']
   },
   {
     name: 'Lavender',
-    fullName: 'Premium Lavender Phenyl',
+    fullName: 'Lavender Phenyl',
     price: 'Contact for Best Price',
     fragrance: 'lavender',
     image: '/products/new_product_10_0.png',
     imagePlaceholderColor: '#EDE7F6',
-    features: ['Aromatherapeutic Clean', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Premium for use']
+    features: ['Aromatherapeutic Clean', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Safe for daily use']
   },
   {
-    name: 'Premium Lemongrass',
-    fullName: 'Premium Lemongrass Phenyl',
+    name: 'Lemon',
+    fullName: 'Lemongrass Phenyl',
     price: 'Contact for Best Price',
     fragrance: 'lemon',
     image: '/products/new_product_11_0.png',
     imagePlaceholderColor: '#FFFDE7',
-    features: ['Aromatherapeutic Clean', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Premium for use']
+    features: ['Aromatherapeutic Clean', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Safe for daily use']
   },
   {
     name: 'Lemongrass',
     fullName: 'Lemongrass Phenyl',
     price: 'Contact for Best Price',
     fragrance: 'lemon',
-    image: '/products/pdf9_img0_0.png',
+    image: '/products/extracted_page1.png',
     imagePlaceholderColor: '#FFFDE7',
-    features: ['Aromatherapeutic Clean', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Premium for use']
+    features: ['Aromatherapeutic Clean', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Safe for daily use']
   },
   {
     name: 'Kapoor',
-    fullName: 'Premium Kapoor Phenyl',
+    fullName: 'Kapoor Phenyl',
     price: 'Contact for Best Price',
     fragrance: 'camphor',
     image: '/products/new_product_12_0.png',
     imagePlaceholderColor: '#E3F2FD',
-    features: ['The Signature "Pure"', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Premium for use']
+    features: ['The Signature "Pure"', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Safe for daily use']
   },
   {
     name: 'Rose',
-    fullName: 'Premium Rose Phenyl',
+    fullName: 'Rose Phenyl',
     price: 'Contact for Best Price',
     fragrance: 'rose',
-    image: '/products/pdf9_img1_0.png',
+    image: '/products/extracted_page0.png',
     imagePlaceholderColor: '#FCE4EC',
-    features: ['Aromatherapeutic Clean', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Premium for use']
+    features: ['Aromatherapeutic Clean', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Safe for daily use']
   }
 ];
 
 const variants5L = [
   {
     name: 'Rose',
-    fullName: 'Premium Rose Phenyl',
+    fullName: 'Rose Phenyl',
     price: 'Contact for Best Price',
     fragrance: 'rose',
     image: '/products/pdf8_img1_0.png',
     imagePlaceholderColor: '#FCE4EC',
-    features: ['Aromatherapeutic Clean', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Premium for use']
+    features: ['Aromatherapeutic Clean', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Safe for daily use']
   },
   {
     name: 'Pine',
-    fullName: 'Premium White Phenyl',
+    fullName: 'White Phenyl',
     price: 'Contact for Best Price',
     fragrance: 'pine',
     image: '/products/pdf5_product_1.jpeg',
     imagePlaceholderColor: '#E8F5E9',
-    features: ['Cost-Efficient Concentration', 'Surface Versatility', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Premium for use']
+    features: ['Cost-Efficient Concentration', 'Surface Versatility', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Safe for daily use']
   },
   {
     name: 'Lavender',
-    fullName: 'Premium Lavender Phenyl',
+    fullName: 'Lavender Phenyl',
     price: 'Contact for Best Price',
     fragrance: 'lavender',
     image: '/products/pdf5_product_3.png',
     imagePlaceholderColor: '#EDE7F6',
-    features: ['Aromatherapeutic Clean', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Premium for use']
+    features: ['Aromatherapeutic Clean', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Safe for daily use']
   },
   {
-    name: 'Premium Lemongrass',
-    fullName: 'Premium Lemongrass Phenyl',
+    name: 'Lemon',
+    fullName: 'Lemongrass Phenyl',
     price: 'Contact for Best Price',
     fragrance: 'lemon',
     image: '/products/pdf5_product_2.png',
     imagePlaceholderColor: '#FFFDE7',
-    features: ['Aromatherapeutic Clean', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Premium for use']
+    features: ['Aromatherapeutic Clean', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Safe for daily use']
   },
   {
     name: 'Lemongrass',
@@ -104,7 +104,7 @@ const variants5L = [
     fragrance: 'lemon',
     image: '/products/pdf8_img3_0.png',
     imagePlaceholderColor: '#FFFDE7',
-    features: ['Aromatherapeutic Clean', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Premium for use']
+    features: ['Aromatherapeutic Clean', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Safe for daily use']
   }
 ];
 

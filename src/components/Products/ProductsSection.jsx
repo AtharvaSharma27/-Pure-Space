@@ -17,7 +17,7 @@ const phenylRecommendations = [
 ];
 
 const liquidRecommendations = [
-  { ...getProductById(8), name: 'Premium White Phenyl', category: 'Floor Care' }, // id 8 is Premium White Phenyl
+  { ...getProductById(8), name: 'White Phenyl', category: 'Floor Care' }, // id 8 is White Phenyl
   { ...getProductById(12), name: 'Multi-Surface Cleaner', category: 'Surface Care' }, // id 12 is Multi-Surface Cleaner
   { ...getProductById(16), name: 'Air Freshener', category: 'Home Care' }, // id 16 is Air Freshener
   { ...getProductById(14), name: 'Liquid Detergent', category: 'Laundry Care' } // id 14 is Premium Liquid Detergent
@@ -72,7 +72,7 @@ const ProductsSection = ({ onViewDetails }) => {
             {/* Phenyls Section using Showcase */}
             <div id="phenyl-range" className="mb-16">
               <h3 className="text-2xl font-semibold text-brand-blue mb-8 text-center sm:text-left px-4">
-                Premium Phenyl Range
+                Phenyl Range
               </h3>
               <PhenylShowcase onViewDetails={onViewDetails} />
             </div>

@@ -173,7 +173,7 @@ export const products = [
   {
     "id": 8,
     "category": "phenyl",
-    "name": "Premium White Phenyl",
+    "name": "White Phenyl",
     "price": "Contact for Best Price",
     "minOrder": null,
     "fragrance": "pine",
@@ -186,7 +186,7 @@ export const products = [
       "Surface Versatility",
       "Engineered for Professionals",
       "Ultra-Stable Emulsion",
-      "Premium for use"
+      "Safe for daily use"
     ],
     "packSize": "1 Ltr & 5 Ltr",
     "form": "Liquid",
@@ -197,13 +197,13 @@ export const products = [
       "Commercial Establishment"
     ],
     "packagingType": "Bottle/Can",
-    "description": "Our Premium White Phenyl is engineered to deliver a hospital-grade clean that is safe for your home, office, or commercial establishment.",
+    "description": "Our White Phenyl is engineered to deliver a hospital-grade clean that is safe for your home, office, or commercial establishment.",
     "badge": "Professional"
   },
   {
     "id": 9,
     "category": "phenyl",
-    "name": "Premium Lavender Phenyl",
+    "name": "Lavender Phenyl",
     "price": "Contact for Best Price",
     "minOrder": null,
     "fragrance": "lavender",
@@ -216,7 +216,7 @@ export const products = [
       "Dual-Action Performance",
       "Engineered for Professionals",
       "Ultra-Stable Emulsion",
-      "Premium for use"
+      "Safe for daily use"
     ],
     "packSize": "1 Ltr & 5 Ltr",
     "form": "Liquid",
@@ -231,7 +231,7 @@ export const products = [
   {
     "id": 10,
     "category": "phenyl",
-    "name": "Premium Lemongrass Phenyl",
+    "name": "Lemongrass Phenyl",
     "price": "Contact for Best Price",
     "minOrder": null,
     "fragrance": "lemon",
@@ -244,7 +244,7 @@ export const products = [
       "Dual-Action Performance",
       "Engineered for Professionals",
       "Ultra-Stable Emulsion",
-      "Premium for use"
+      "Safe for daily use"
     ],
     "packSize": "1 Ltr & 5 Ltr",
     "form": "Liquid",
@@ -259,7 +259,7 @@ export const products = [
   {
     "id": 11,
     "category": "phenyl",
-    "name": "Premium Kapoor Phenyl",
+    "name": "Kapoor Phenyl",
     "price": "Contact for Best Price",
     "minOrder": null,
     "fragrance": "camphor",
@@ -272,7 +272,7 @@ export const products = [
       "Dual-Action Performance",
       "Engineered for Professionals",
       "Ultra-Stable Emulsion",
-      "Premium for use"
+      "Safe for daily use"
     ],
     "packSize": "1 Ltr & 5 Ltr",
     "form": "Liquid",
@@ -300,7 +300,7 @@ export const products = [
       "Dual-Action Performance",
       "Engineered for Professionals",
       "Ultra-Stable Emulsion",
-      "Premium for use"
+      "Safe for daily use"
     ],
     "packSize": "500ml",
     "form": "Liquid Spray",
@@ -437,7 +437,7 @@ export const products = [
   {
     "id": 18,
     "category": "phenyl",
-    "name": "Premium White Phenyl 5Ltr",
+    "name": "White Phenyl 5Ltr",
     "price": "Contact for Best Price",
     "minOrder": null,
     "fragrance": "pine",
@@ -450,7 +450,7 @@ export const products = [
       "Surface Versatility",
       "Engineered for Professionals",
       "Ultra-Stable Emulsion",
-      "Premium for use"
+      "Safe for daily use"
     ],
     "packSize": "5 Ltr",
     "form": "Liquid",
@@ -461,13 +461,13 @@ export const products = [
       "Commercial Establishment"
     ],
     "packagingType": "Bottle/Can",
-    "description": "Our Premium White Phenyl is engineered to deliver a hospital-grade clean that is safe for your home, office, or commercial establishment.",
+    "description": "Our White Phenyl is engineered to deliver a hospital-grade clean that is safe for your home, office, or commercial establishment.",
     "badge": "Professional"
   },
   {
     "id": 19,
     "category": "phenyl",
-    "name": "Premium Lemongrass Phenyl 5Ltr",
+    "name": "Lemongrass Phenyl 5Ltr",
     "price": "Contact for Best Price",
     "minOrder": null,
     "fragrance": "lemon",
@@ -480,7 +480,7 @@ export const products = [
       "Dual-Action Performance",
       "Engineered for Professionals",
       "Ultra-Stable Emulsion",
-      "Premium for use"
+      "Safe for daily use"
     ],
     "packSize": "5 Ltr",
     "form": "Liquid",
@@ -495,7 +495,7 @@ export const products = [
   {
     "id": 20,
     "category": "phenyl",
-    "name": "Premium Lavender Phenyl 5Ltr",
+    "name": "Lavender Phenyl 5Ltr",
     "price": "Contact for Best Price",
     "minOrder": null,
     "fragrance": "lavender",
@@ -508,7 +508,7 @@ export const products = [
       "Dual-Action Performance",
       "Engineered for Professionals",
       "Ultra-Stable Emulsion",
-      "Premium for use"
+      "Safe for daily use"
     ],
     "packSize": "5 Ltr",
     "form": "Liquid",

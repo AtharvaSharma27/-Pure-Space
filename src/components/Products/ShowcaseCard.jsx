@@ -17,7 +17,7 @@ const ProductImage = ({ variant }) => {
         alt={variant.fullName}
         loading="lazy"
         decoding="async"
-        className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+        className="w-full h-full object-contain p-4 mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
         onError={() => setImgError(true)}
       />
     );
@@ -42,7 +42,10 @@ const ShowcaseCard = ({ variants, size = "1 Ltr", onViewDetails }) => {
   return (
     <div className="group bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-brand-teal/30 transition-all duration-300 hover:-translate-y-1 p-5 flex flex-col h-full">
       {/* Main Product Image Area */}
-      <div className="relative w-full aspect-square overflow-hidden rounded-xl border border-gray-100 bg-gray-50/50 mb-5 cursor-pointer flex-shrink-0 group-hover:shadow-inner transition-all duration-500">
+      <div 
+        className="relative w-full aspect-square overflow-hidden rounded-xl border border-gray-100 mb-5 cursor-pointer flex-shrink-0 group-hover:shadow-inner transition-all duration-500"
+        style={{ backgroundColor: selectedVariant.imagePlaceholderColor }}
+      >
         <ProductImage variant={selectedVariant} />
       </div>
 
@@ -94,7 +97,10 @@ const ShowcaseCard = ({ variants, size = "1 Ltr", onViewDetails }) => {
                     <CheckCircle2 size={12} fill="currentColor" className="text-white" />
                   </div>
                 )}
-                <div className={`w-12 h-12 mb-1.5 rounded-lg overflow-hidden flex items-center justify-center ${isActive ? 'bg-white shadow-sm' : 'bg-gray-50'}`}>
+                <div 
+                  className="w-12 h-12 mb-1.5 rounded-lg overflow-hidden flex items-center justify-center shadow-sm"
+                  style={{ backgroundColor: v.imagePlaceholderColor }}
+                >
                    {v.image ? (
                      <img src={v.image.startsWith("/") ? `${import.meta.env.BASE_URL}${v.image.slice(1)}` : v.image} alt={v.name} className="w-full h-full object-contain mix-blend-multiply" />
                    ) : (
