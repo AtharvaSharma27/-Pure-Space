@@ -413,7 +413,7 @@ export const products = [
     "fragrance": "lemon",
     "fragranceLabel": "Lemon",
     "color": "Yellow",
-    "image": "/products/pdf8_img2_0.png",
+    "image": "/products/untitled_product_4.jpeg",
     "imagePlaceholderColor": "#FFFDE7",
     "features": [
       "Grease Cutter",
@@ -583,7 +583,7 @@ export const products = [
     "fragrance": "fresh",
     "fragranceLabel": "Fresh",
     "color": "Blue",
-    "image": "/products/pdf5_product_6.png",
+    "image": "/products/untitled_product_5.jpeg",
     "imagePlaceholderColor": "#E3F2FD",
     "features": [
       "Powerful Cleaning Action",
