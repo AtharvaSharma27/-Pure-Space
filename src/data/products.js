@@ -231,7 +231,7 @@ export const products = [
   {
     "id": 10,
     "category": "phenyl",
-    "name": "Lemongrass Phenyl",
+    "name": "Lemon Phenyl",
     "price": "Contact for Best Price",
     "minOrder": null,
     "fragrance": "lemon",
@@ -467,7 +467,7 @@ export const products = [
   {
     "id": 19,
     "category": "phenyl",
-    "name": "Lemongrass Phenyl 5Ltr",
+    "name": "Lemon Phenyl 5Ltr",
     "price": "Contact for Best Price",
     "minOrder": null,
     "fragrance": "lemon",
