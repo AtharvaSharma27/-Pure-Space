@@ -184,6 +184,8 @@ const ModalImage = ({ product }) => {
         <img
           src={product.image.startsWith("/") ? `${import.meta.env.BASE_URL}${product.image.slice(1)}` : product.image}
           alt={product.name}
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-contain p-4"
           onError={() => setImgError(true)}
         />
