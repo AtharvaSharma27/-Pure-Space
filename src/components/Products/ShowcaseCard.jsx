@@ -43,8 +43,7 @@ const ShowcaseCard = ({ variants, size = "1 Ltr", onViewDetails }) => {
     <div className="group bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-brand-teal/30 transition-all duration-300 hover:-translate-y-1 p-5 flex flex-col h-full">
       {/* Main Product Image Area */}
       <div 
-        className="relative w-full aspect-square overflow-hidden rounded-xl border border-gray-100 mb-5 cursor-pointer flex-shrink-0 group-hover:shadow-inner transition-all duration-500"
-        style={{ backgroundColor: selectedVariant.imagePlaceholderColor }}
+        className="relative w-full aspect-square overflow-hidden rounded-xl border border-gray-100 mb-5 cursor-pointer flex-shrink-0 group-hover:shadow-inner transition-all duration-500 bg-gray-50"
       >
         <ProductImage variant={selectedVariant} />
       </div>
@@ -98,13 +97,12 @@ const ShowcaseCard = ({ variants, size = "1 Ltr", onViewDetails }) => {
                   </div>
                 )}
                 <div 
-                  className="w-12 h-12 mb-1.5 rounded-lg overflow-hidden flex items-center justify-center shadow-sm"
-                  style={{ backgroundColor: v.imagePlaceholderColor }}
+                  className="w-12 h-12 mb-1.5 rounded-lg overflow-hidden flex items-center justify-center shadow-sm bg-gray-50"
                 >
                    {v.image ? (
                      <img src={v.image.startsWith("/") ? `${import.meta.env.BASE_URL}${v.image.slice(1)}` : v.image} alt={v.name} className="w-full h-full object-contain mix-blend-multiply" />
                    ) : (
-                     <div className="w-full h-full" style={{ backgroundColor: v.imagePlaceholderColor }}></div>
+                     <div className="w-full h-full bg-gray-50"></div>
                    )}
                 </div>
                 <span className={`text-[11px] leading-tight text-center truncate w-full px-1 ${isActive ? 'font-bold text-brand-teal' : 'font-medium text-gray-500'}`}>
