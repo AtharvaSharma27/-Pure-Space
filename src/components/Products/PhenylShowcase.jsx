@@ -10,7 +10,7 @@ const variants1L = [
     price: 'Contact for Best Price',
     fragrance: 'pine',
     image: '/products/new_product_9_0.jpeg',
-    imagePlaceholderColor: '#E8F5E9',
+    imagePlaceholderColor: '#FFFFFF',
     features: ['Cost-Efficient Concentration', 'Surface Versatility', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Safe for daily use']
   },
   {
@@ -18,7 +18,7 @@ const variants1L = [
     fullName: 'Lavender Phenyl',
     price: 'Contact for Best Price',
     fragrance: 'lavender',
-    image: '/products/new_product_10_0.png',
+    image: '/products/final_product_1.png',
     imagePlaceholderColor: '#EDE7F6',
     features: ['Aromatherapeutic Clean', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Safe for daily use']
   },
@@ -27,13 +27,13 @@ const variants1L = [
     fullName: 'Lemon Phenyl',
     price: 'Contact for Best Price',
     fragrance: 'lemon',
-    image: '/products/new_product_11_0.png',
+    image: '/products/final_product_2.png',
     imagePlaceholderColor: '#FFFDE7',
     features: ['Aromatherapeutic Clean', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Safe for daily use']
   },
   {
     name: 'Lemongrass',
-    fullName: 'Lemon Phenyl',
+    fullName: 'Lemongrass Phenyl',
     price: 'Contact for Best Price',
     fragrance: 'lemon',
     image: '/products/extracted_page1.png',
@@ -46,7 +46,7 @@ const variants1L = [
     price: 'Contact for Best Price',
     fragrance: 'camphor',
     image: '/products/new_product_12_0.png',
-    imagePlaceholderColor: '#E3F2FD',
+    imagePlaceholderColor: '#FFFFFF',
     features: ['The Signature "Pure"', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Safe for daily use']
   },
   {
@@ -54,7 +54,7 @@ const variants1L = [
     fullName: 'Rose Phenyl',
     price: 'Contact for Best Price',
     fragrance: 'rose',
-    image: '/products/extracted_page0.png',
+    image: '/products/final_product_5.png',
     imagePlaceholderColor: '#FCE4EC',
     features: ['Aromatherapeutic Clean', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Safe for daily use']
   }
@@ -66,7 +66,7 @@ const variants5L = [
     fullName: 'Rose Phenyl',
     price: 'Contact for Best Price',
     fragrance: 'rose',
-    image: '/products/pdf8_img1_0.png',
+    image: '/products/final_product_12.png',
     imagePlaceholderColor: '#FCE4EC',
     features: ['Aromatherapeutic Clean', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Safe for daily use']
   },
@@ -76,7 +76,7 @@ const variants5L = [
     price: 'Contact for Best Price',
     fragrance: 'pine',
     image: '/products/pdf5_product_1.jpeg',
-    imagePlaceholderColor: '#E8F5E9',
+    imagePlaceholderColor: '#FFFFFF',
     features: ['Cost-Efficient Concentration', 'Surface Versatility', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Safe for daily use']
   },
   {
@@ -84,7 +84,7 @@ const variants5L = [
     fullName: 'Lavender Phenyl',
     price: 'Contact for Best Price',
     fragrance: 'lavender',
-    image: '/products/pdf5_product_3.png',
+    image: '/products/final_product_6.png',
     imagePlaceholderColor: '#EDE7F6',
     features: ['Aromatherapeutic Clean', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Safe for daily use']
   },
@@ -93,13 +93,13 @@ const variants5L = [
     fullName: 'Lemon Phenyl',
     price: 'Contact for Best Price',
     fragrance: 'lemon',
-    image: '/products/pdf5_product_2.png',
+    image: '/products/final_product_13.png',
     imagePlaceholderColor: '#FFFDE7',
     features: ['Aromatherapeutic Clean', 'Dual-Action Performance', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Safe for daily use']
   },
   {
     name: 'Lemongrass',
-    fullName: 'Lemon Phenyl',
+    fullName: 'Lemongrass Phenyl',
     price: 'Contact for Best Price',
     fragrance: 'lemon',
     image: '/products/pdf8_img3_0.png',

@@ -16,7 +16,7 @@ export const products = [
     "fragrance": "rose",
     "fragranceLabel": "Rose",
     "color": "Pink",
-    "image": "/products/new_product_2_0.png",
+    "image": "/products/final_product_8.png",
     "imagePlaceholderColor": "#FCE4EC",
     "features": [
       "Deep Cleaning (Remove Dirt & Grease)",
@@ -43,7 +43,7 @@ export const products = [
     "fragrance": "lemon",
     "fragranceLabel": "Lemon",
     "color": "Yellow",
-    "image": "/products/lemon_cleaner_extracted.png",
+    "image": "/products/final_product_11.png",
     "imagePlaceholderColor": "#FFFDE7",
     "features": [
       "Deep Cleaning (Remove Dirt & Grease)",
@@ -97,7 +97,7 @@ export const products = [
     "fragrance": "fresh",
     "fragranceLabel": "Fresh",
     "color": "Blue",
-    "image": "/products/new_product_6_0.png",
+    "image": "/products/final_product_10.png",
     "imagePlaceholderColor": "#E3F2FD",
     "features": [
       "Powerful Cleaning Action",
@@ -124,7 +124,7 @@ export const products = [
     "fragrance": "fresh",
     "fragranceLabel": "Fresh",
     "color": "Blue",
-    "image": "/products/new_product_7_0.png",
+    "image": "/products/final_product_9.png",
     "imagePlaceholderColor": "#E3F2FD",
     "features": [
       "Superior Cleaning Power",
@@ -151,7 +151,7 @@ export const products = [
     "fragrance": "lemon",
     "fragranceLabel": "Lemon",
     "color": "Yellow",
-    "image": "/products/new_product_8_0.png",
+    "image": "/products/final_product_3.png",
     "imagePlaceholderColor": "#FFFDE7",
     "features": [
       "High-Concentration Gel",
@@ -180,7 +180,7 @@ export const products = [
     "fragranceLabel": "Pine",
     "color": "White",
     "image": "/products/new_product_9_0.jpeg",
-    "imagePlaceholderColor": "#E8F5E9",
+    "imagePlaceholderColor": "#FFFFFF",
     "features": [
       "Cost-Efficient Concentration",
       "Surface Versatility",
@@ -209,8 +209,8 @@ export const products = [
     "fragrance": "lavender",
     "fragranceLabel": "Lavender",
     "color": "Purple",
-    "image": "/products/new_product_10_0.png",
-    "imagePlaceholderColor": "#EDE7F6",
+    "image": "/products/final_product_1.png",
+    "imagePlaceholderColor": "#FFFFFF",
     "features": [
       "Aromatherapeutic Clean",
       "Dual-Action Performance",
@@ -237,7 +237,7 @@ export const products = [
     "fragrance": "lemon",
     "fragranceLabel": "Lemongrass",
     "color": "Yellow",
-    "image": "/products/new_product_11_0.png",
+    "image": "/products/final_product_2.png",
     "imagePlaceholderColor": "#FFFDE7",
     "features": [
       "Aromatherapeutic Clean",
@@ -266,7 +266,7 @@ export const products = [
     "fragranceLabel": "Camphor",
     "color": "White",
     "image": "/products/new_product_12_0.png",
-    "imagePlaceholderColor": "#E3F2FD",
+    "imagePlaceholderColor": "#FFFFFF",
     "features": [
       "The Signature \"Pure\"",
       "Dual-Action Performance",
@@ -353,7 +353,7 @@ export const products = [
     "fragrance": "fresh",
     "fragranceLabel": "Fresh",
     "color": "White",
-    "image": "/products/pdf8_img0_0.png",
+    "image": "/products/final_product_4.png",
     "imagePlaceholderColor": "#F3F4F6",
     "features": [
       "Color Care",
@@ -444,7 +444,7 @@ export const products = [
     "fragranceLabel": "Pine",
     "color": "White",
     "image": "/products/pdf5_product_1.jpeg",
-    "imagePlaceholderColor": "#E8F5E9",
+    "imagePlaceholderColor": "#FFFFFF",
     "features": [
       "Cost-Efficient Concentration",
       "Surface Versatility",
@@ -473,8 +473,8 @@ export const products = [
     "fragrance": "lemon",
     "fragranceLabel": "Lemongrass",
     "color": "Yellow",
-    "image": "/products/pdf5_product_2.png",
-    "imagePlaceholderColor": "#FFFDE7",
+    "image": "/products/final_product_13.png",
+    "imagePlaceholderColor": "#FFFFFF",
     "features": [
       "Aromatherapeutic Clean",
       "Dual-Action Performance",
@@ -501,7 +501,7 @@ export const products = [
     "fragrance": "lavender",
     "fragranceLabel": "Lavender",
     "color": "Purple",
-    "image": "/products/pdf5_product_3.png",
+    "image": "/products/final_product_6.png",
     "imagePlaceholderColor": "#EDE7F6",
     "features": [
       "Aromatherapeutic Clean",
@@ -529,7 +529,7 @@ export const products = [
     "fragrance": "rose",
     "fragranceLabel": "Rose",
     "color": "Pink",
-    "image": "/products/pdf5_product_4.png",
+    "image": "/products/final_product_7.png",
     "imagePlaceholderColor": "#FCE4EC",
     "features": [
       "Deep Cleaning (Remove Dirt & Grease)",

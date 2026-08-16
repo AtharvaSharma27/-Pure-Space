@@ -8,7 +8,7 @@ const variants1L = [
     fullName: 'Rose Floor Cleaner',
     price: 'Contact for Best Price',
     fragrance: 'rose',
-    image: '/products/pdf5_product_4.png',
+    image: '/products/final_product_7.png',
     imagePlaceholderColor: '#FCE4EC',
     features: ['Deep Cleaning (Remove Dirt & Grease)', 'Fresh Rose Fragrance', 'No harmful chemical used', 'Fight bad odour']
   },
@@ -38,7 +38,7 @@ const variants5L = [
     fullName: 'Rose Floor Cleaner',
     price: 'Contact for Best Price',
     fragrance: 'rose',
-    image: '/products/new_product_2_0.png',
+    image: '/products/final_product_8.png',
     imagePlaceholderColor: '#FCE4EC',
     features: ['Deep Cleaning (Remove Dirt & Grease)', 'Fresh Rose Fragrance', 'No harmful chemical used', 'Fight bad odour']
   },
@@ -47,7 +47,7 @@ const variants5L = [
     fullName: 'Lemon Floor Cleaner',
     price: 'Contact for Best Price',
     fragrance: 'lemon',
-    image: '/products/lemon_cleaner_extracted.png',
+    image: '/products/final_product_11.png',
     imagePlaceholderColor: '#FFFDE7',
     features: ['Deep Cleaning (Remove Dirt & Grease)', 'Fresh Lemon Fragrance', 'No harmful chemical used', 'Fight bad odour']
   },
