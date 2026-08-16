@@ -75,7 +75,7 @@ const variants5L = [
     fullName: 'White Phenyl',
     price: 'Contact for Best Price',
     fragrance: 'pine',
-    image: '/products/pdf5_product_1.jpeg',
+    image: '/products/untitled_product_1.jpeg',
     imagePlaceholderColor: '#FFFFFF',
     features: ['Cost-Efficient Concentration', 'Surface Versatility', 'Engineered for Professionals', 'Ultra-Stable Emulsion', 'Safe for daily use']
   },

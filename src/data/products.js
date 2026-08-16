@@ -70,7 +70,7 @@ export const products = [
     "fragrance": "rose",
     "fragranceLabel": "Rose",
     "color": "Pink",
-    "image": "/products/power_wipe_extracted.png",
+    "image": "/products/untitled_product_6.jpeg",
     "imagePlaceholderColor": "#FCE4EC",
     "features": [
       "Deep Cleaning (Remove Dirt & Grease)",
@@ -97,7 +97,7 @@ export const products = [
     "fragrance": "fresh",
     "fragranceLabel": "Fresh",
     "color": "Blue",
-    "image": "/products/final_product_10.png",
+    "image": "/products/untitled_product_5.jpeg",
     "imagePlaceholderColor": "#E3F2FD",
     "features": [
       "Powerful Cleaning Action",
@@ -151,7 +151,7 @@ export const products = [
     "fragrance": "lemon",
     "fragranceLabel": "Lemon",
     "color": "Yellow",
-    "image": "/products/final_product_3.png",
+    "image": "/products/untitled_product_4.jpeg",
     "imagePlaceholderColor": "#FFFDE7",
     "features": [
       "High-Concentration Gel",
@@ -639,7 +639,7 @@ export const products = [
     "fragrance": "jasmine",
     "fragranceLabel": "Jasmine",
     "color": "Green",
-    "image": "/products/pdf6_product_2.png",
+    "image": "/products/untitled_product_3.jpeg",
     "imagePlaceholderColor": "#E8F5E9",
     "features": [
       "Deep Cleaning Power",
@@ -666,7 +666,7 @@ export const products = [
     "fragrance": "jasmine",
     "fragranceLabel": "Jasmine",
     "color": "Green",
-    "image": "/products/pdf6_product_4.png",
+    "image": "/products/untitled_product_2.jpeg",
     "imagePlaceholderColor": "#E8F5E9",
     "features": [
       "Deep Cleaning Power",

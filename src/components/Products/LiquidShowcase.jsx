@@ -26,7 +26,7 @@ const variants1L = [
     fullName: 'Jasmine Floor Cleaner',
     price: 'Contact for Best Price',
     fragrance: 'jasmine',
-    image: '/products/pdf6_product_4.png',
+    image: '/products/untitled_product_2.jpeg',
     imagePlaceholderColor: '#E8F5E9',
     features: ['Deep Cleaning Power', 'Refreshing Jasmine Fragrance', 'Safe for all floors', 'Removes Tough Stains']
   }
@@ -56,7 +56,7 @@ const variants5L = [
     fullName: 'Jasmine Floor Cleaner',
     price: 'Contact for Best Price',
     fragrance: 'jasmine',
-    image: '/products/pdf6_product_2.png',
+    image: '/products/untitled_product_3.jpeg',
     imagePlaceholderColor: '#E8F5E9',
     features: ['Deep Cleaning Power', 'Refreshing Jasmine Fragrance', 'Safe for all floors', 'Removes Tough Stains']
   },
@@ -65,7 +65,7 @@ const variants5L = [
     fullName: 'Power Wipe Cleaner',
     price: 'Contact for Best Price',
     fragrance: 'rose',
-    image: '/products/power_wipe_extracted.png',
+    image: '/products/untitled_product_6.jpeg',
     imagePlaceholderColor: '#FCE4EC',
     features: ['Deep Cleaning (Remove Dirt & Grease)', 'Power GYM cleaner', 'No harmful chemical used', 'Fight bad odour']
   }
