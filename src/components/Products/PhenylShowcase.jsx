@@ -24,7 +24,7 @@ const variants1L = [
   },
   {
     name: 'Lemon',
-    fullName: 'Lemongrass Phenyl',
+    fullName: 'Lemon Phenyl',
     price: 'Contact for Best Price',
     fragrance: 'lemon',
     image: '/products/new_product_11_0.png',
@@ -90,7 +90,7 @@ const variants5L = [
   },
   {
     name: 'Lemon',
-    fullName: 'Lemongrass Phenyl',
+    fullName: 'Lemon Phenyl',
     price: 'Contact for Best Price',
     fragrance: 'lemon',
     image: '/products/pdf5_product_2.png',
