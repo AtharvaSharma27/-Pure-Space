@@ -97,7 +97,7 @@ export const products = [
     "fragrance": "fresh",
     "fragranceLabel": "Fresh",
     "color": "Blue",
-    "image": "/products/untitled_product_4.jpeg",
+    "image": "/products/untitled_product_5.jpeg",
     "imagePlaceholderColor": "#E3F2FD",
     "features": [
       "Powerful Cleaning Action",
@@ -151,7 +151,7 @@ export const products = [
     "fragrance": "lemon",
     "fragranceLabel": "Lemon",
     "color": "Yellow",
-    "image": "/products/untitled_product_5.jpeg",
+    "image": "/products/untitled_product_4.jpeg",
     "imagePlaceholderColor": "#FFFDE7",
     "features": [
       "High-Concentration Gel",
