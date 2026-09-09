@@ -73,9 +73,14 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-2.5">
                 <Phone size={16} className="text-brand-teal mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-gray-400">
-                  {import.meta.env.VITE_BRAND_PHONE || '+91-XXXXXXXXXX'}
-                </span>
+                <div className="flex flex-col gap-1">
+                  <a href="tel:+919653296662" className="text-sm text-gray-400 hover:text-brand-teal transition-colors">
+                    +91 9653296662
+                  </a>
+                  <a href="tel:+918104021616" className="text-sm text-gray-400 hover:text-brand-teal transition-colors">
+                    +91 8104021616
+                  </a>
+                </div>
               </li>
               <li className="flex items-start gap-2.5">
                 <Mail size={16} className="text-brand-teal mt-0.5 flex-shrink-0" />
