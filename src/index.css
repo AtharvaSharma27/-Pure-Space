@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+/* stylelint-disable-next-line */
+/* prettier-ignore */
 @theme {
   --font-poppins: 'Poppins', sans-serif;
 
