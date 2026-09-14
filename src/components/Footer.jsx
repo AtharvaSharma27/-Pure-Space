@@ -12,8 +12,11 @@ const Footer = () => {
             <p className="text-sm text-brand-teal font-medium mb-4">
               Pure space Enjoy your space
             </p>
-            <p className="text-sm text-gray-400 leading-relaxed mb-6">
+            <p className="text-sm text-gray-400 leading-relaxed mb-4">
               India's premium cleaning solutions brand — trusted by homes, hospitals, and businesses.
+            </p>
+            <p className="text-sm font-medium text-gray-300 mb-6">
+              Registration Number : 27ABJFP0362J1Z2
             </p>
             {/* Social Icons */}
             <div className="flex gap-3">

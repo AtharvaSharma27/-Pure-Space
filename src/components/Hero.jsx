@@ -82,6 +82,9 @@ const Hero = () => {
               India's premium range of disinfectants, floor cleaners, glass cleaners &
               hygiene solutions — for homes, offices & industries.
             </p>
+            <p className="text-sm sm:text-base font-semibold text-brand-blue mb-8">
+              Registration Number : 27ABJFP0362J1Z2
+            </p>
           </motion.div>
 
           {/* Hero Image Placeholder */}
