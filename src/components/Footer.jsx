@@ -78,7 +78,7 @@ const Footer = () => {
                 <Phone size={16} className="text-brand-teal mt-0.5 flex-shrink-0" />
                 <div className="flex flex-col gap-1">
                   <a href="tel:+919653296662" className="text-sm text-gray-400 hover:text-brand-teal transition-colors flex items-center justify-between">
-                    <span>Manish</span>
+                    <span>Manish Jaiswar</span>
                     <span>+91 9653296662</span>
                   </a>
                   <a href="tel:+919920850888" className="text-sm text-gray-400 hover:text-brand-teal transition-colors flex items-center justify-between mt-1">

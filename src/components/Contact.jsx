@@ -107,7 +107,7 @@ const Contact = () => {
               <Phone size={32} color="white" />
             </div>
             <div className="text-center">
-              <h3 className="text-lg font-bold text-brand-dark mb-1">Manish</h3>
+              <h3 className="text-lg font-bold text-brand-dark mb-1">Manish Jaiswar</h3>
               <p className="text-sm text-brand-gray">+91 96532 96662</p>
             </div>
             <span
