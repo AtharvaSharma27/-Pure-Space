@@ -55,7 +55,7 @@ const Contact = () => {
               <p className="text-sm text-brand-gray">Send us a message anytime</p>
             </div>
             <span
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white text-sm font-semibold transition-all duration-300 shadow-md group-hover:shadow-lg"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white text-sm font-semibold transition-all duration-300 shadow-md group-hover:shadow-lg mt-auto"
               style={{ background: 'linear-gradient(135deg, #25D366, #128C7E)' }}
             >
               <MessageCircle size={16} />
@@ -63,9 +63,9 @@ const Contact = () => {
             </span>
           </motion.a>
 
-          {/* Call Card */}
+          {/* Call Card 1 */}
           <motion.a
-            href={`tel:+${phoneNumber}`}
+            href={`tel:+919920850888`}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -79,11 +79,39 @@ const Contact = () => {
               <Phone size={32} color="white" />
             </div>
             <div className="text-center">
-              <h3 className="text-lg font-bold text-brand-dark mb-1">Call Us Directly</h3>
-              <p className="text-sm text-brand-gray">Talk to us right now</p>
+              <h3 className="text-lg font-bold text-brand-dark mb-1">Vaibhav Gupta</h3>
+              <p className="text-sm text-brand-gray">+91 99208 50888</p>
             </div>
             <span
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white text-sm font-semibold transition-all duration-300 shadow-md group-hover:shadow-lg"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white text-sm font-semibold transition-all duration-300 shadow-md group-hover:shadow-lg mt-auto"
+              style={{ background: 'linear-gradient(135deg, #0099A8, #006B75)' }}
+            >
+              <Phone size={16} />
+              Call Now →
+            </span>
+          </motion.a>
+
+          {/* Call Card 2 */}
+          <motion.a
+            href={`tel:+919653296662`}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            whileHover={{ scale: 1.03, y: -4 }}
+            whileTap={{ scale: 0.97 }}
+            className="flex-1 flex flex-col items-center gap-4 p-8 rounded-2xl sm:rounded-3xl shadow-xl border border-brand-teal/20 bg-white cursor-pointer group"
+            style={{ textDecoration: 'none' }}
+          >
+            <div className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg bg-brand-teal" style={{ background: 'linear-gradient(135deg, #0099A8, #006B75)' }}>
+              <Phone size={32} color="white" />
+            </div>
+            <div className="text-center">
+              <h3 className="text-lg font-bold text-brand-dark mb-1">Manish</h3>
+              <p className="text-sm text-brand-gray">+91 96532 96662</p>
+            </div>
+            <span
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white text-sm font-semibold transition-all duration-300 shadow-md group-hover:shadow-lg mt-auto"
               style={{ background: 'linear-gradient(135deg, #0099A8, #006B75)' }}
             >
               <Phone size={16} />

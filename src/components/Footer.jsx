@@ -16,7 +16,7 @@ const Footer = () => {
               India's premium cleaning solutions brand — trusted by homes, hospitals, and businesses.
             </p>
             <p className="text-sm font-medium text-gray-300 mb-6">
-              Registration Number : 27ABJFP0362J1Z2
+              GST : 27ABJFP0362J1Z2
             </p>
             {/* Social Icons */}
             <div className="flex gap-3">
@@ -77,11 +77,13 @@ const Footer = () => {
               <li className="flex items-start gap-2.5">
                 <Phone size={16} className="text-brand-teal mt-0.5 flex-shrink-0" />
                 <div className="flex flex-col gap-1">
-                  <a href="tel:+919653296662" className="text-sm text-gray-400 hover:text-brand-teal transition-colors">
-                    +91 9653296662
+                  <a href="tel:+919653296662" className="text-sm text-gray-400 hover:text-brand-teal transition-colors flex items-center justify-between">
+                    <span>Manish</span>
+                    <span>+91 9653296662</span>
                   </a>
-                  <a href="tel:+918104021616" className="text-sm text-gray-400 hover:text-brand-teal transition-colors">
-                    +91 8104021616
+                  <a href="tel:+919920850888" className="text-sm text-gray-400 hover:text-brand-teal transition-colors flex items-center justify-between mt-1">
+                    <span>Vaibhav Gupta</span>
+                    <span>+91 99208 50888</span>
                   </a>
                 </div>
               </li>
